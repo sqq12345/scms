@@ -1,0 +1,1 @@
+open_basedir=/www/wwwroot/www.shichamaishou.com/trunk/:/tmp/:/proc/

@@ -1,0 +1,1952 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+    <meta charset=UTF-8>
+    <title>时差买手</title>
+    <link href=./public/layui/css/layui.css rel=stylesheet><link href=http://admin.shichamaishou.com/css/index.css?b1ba9203d4ea086dfa19 rel=stylesheet></head>
+    <script src=./public/layui/layui.js></script>
+<script src=./public/tween/TweenMax.min.js></script>
+<script src=./public/editor/wangEditor.js></script>
+
+
+<body class=layui-layout-body>
+<div class="layui-layout layui-layout-admin">
+    <div class="layui-header menu" style="background-color: #4d91e4">
+        <div class=layui-logo style="color: white">时差买手后台</div>
+        <ul class="layui-nav layui-layout-right">
+            <li class=layui-nav-item>
+                <a href=javascript:; id=username>
+                    <img src=http://t.cn/RCzsdCq class=layui-nav-img>
+                    <span></span>
+                </a>
+            </li>
+            <li class=layui-nav-item><a href=javascript:; id=logout>退出登陆</a></li>
+        </ul>
+    </div>
+    <div class="layui-side layui-bg-black">
+        <div class=layui-side-scroll>
+            <ul class="layui-nav layui-nav-tree" lay-filter=test>
+                <li class="layui-nav-item layui-hide">
+                    <a href=javascript:; class="nav-bar-click site-active" id=overview data-type=tabAdd data-clone=overview-clone bar-type=overview>欢迎页</a>
+                </li>
+
+                <li class=layui-nav-item>
+                    <a class="" href=javascript:;>商品管理（一件代发）</a>
+                    <dl class=layui-nav-child>
+                        <dd><a href=javascript:; class="nav-bar-click site-active" data-clone=classification_of_goods_div-clone bar-type=classification_of_goods_index_yj supplementary-title=（一件代发）>商品分类</a></dd>
+                        <dd><a href=javascript:; class="nav-bar-click site-active" data-clone=classification-of-goods-administration-div-clone bar-type=classification_of_goods_administration_yj supplementary-title=（一件代发）>商品管理</a></dd>
+                    </dl>
+                </li>
+                <li class=layui-nav-item>
+                    <a class="" href=javascript:;>商品管理（预约爆款）</a>
+                    <dl class=layui-nav-child>
+                        <dd><a href=javascript:; class="nav-bar-click site-active" data-type=tabAdd data-clone=classification-of-goods-bk-div-clone bar-type=classification_of_goods_index_bk supplementary-title=（预约爆款）>商品分类</a></dd>
+                        <dd><a href=javascript:; class="nav-bar-click site-active" data-type=tabAdd data-clone=classification-of-goods-administration-bk-div-clone bar-type=classification_of_goods_administration_bk supplementary-title=（预约爆款）>商品管理</a></dd>
+                    </dl>
+                </li>
+                <li class=layui-nav-item>
+                    <a href=javascript:;>订单</a>
+                    <dl class=layui-nav-child>
+                        <dd><a href=javascript:; class="nav-bar-click site-active" data-clone=stock-order-list-clone bar-type=stock-order-list>订单列表（一件代发）</a></dd>
+                        <dd><a href=javascript:; class="nav-bar-click site-active" data-clone=delivery-management-div-clone bar-type=delivery-management>发货管理</a></dd>
+                        <dd><a href=javascript:; class="nav-bar-click site-active" data-clone=stock-order-list-clone-bk bar-type=stock-order-list-bk>订单列表（预约爆款）</a></dd>
+                        <dd><a href=javascript:; class="nav-bar-click site-active" data-clone=commodity-return-list-clone bar-type=commodity-return-list>商品退换</a></dd>
+                    </dl>
+                </li>
+
+                <li class=layui-nav-item>
+                    <a href=javascript:;>营销管理</a>
+                    <dl class=layui-nav-child>
+                        <dd><a href=javascript:; class="nav-bar-click site-active" data-type=tabAdd data-clone=special-offer-clone bar-type=special-offer>特价管理</a></dd>
+                        <dd><a href=javascript:; class="nav-bar-click site-active" data-type=tabAdd data-clone=free-shipping-clone bar-type=free-shipping>包邮管理</a></dd>
+                    </dl>
+                </li>
+                <li class=layui-nav-item>
+                    <a href=javascript:;>客户</a>
+                    <dl class=layui-nav-child>
+                        <dd><a href=javascript:; class="nav-bar-click site-active" data-type=tabAdd data-clone=purchasing-agent-management-clone bar-type=purchasing-agent-management>代购管理</a></dd>
+                    </dl>
+                </li>
+                <li class=layui-nav-item>
+                    <a href=javascript:; class=nav-bar-click>基本配置</a>
+                    <dl class=layui-nav-child>
+                        <dd><a href=javascript:; class="nav-bar-click site-active" data-type=tabAdd data-clone=index-banner-management-clone bar-type=index-banner-management>首页banner</a></dd>
+                        <dd>
+                            <a href=javascript:; class="nav-bar-click site-active" id=brand_admin data-type=tabAdd data-clone=brand-list-div-clone bar-type=brand-list>品牌管理</a>
+                        </dd>
+                        <dd>
+                            <a href=javascript:; class="nav-bar-click site-active" id=option-template data-type=tabAdd data-clone=classification-of-goods-classification-div-clone bar-type=classification-of-goods-classification>型号模板</a>
+                        </dd>
+                        <dd><a href=javascript:; class="nav-bar-click site-active" data-type=tabAdd data-clone=admin-management-clone bar-type=admin-management>管理员管理</a></dd>
+                        <dd><a href=javascript:; class="nav-bar-click site-active" data-type=tabAdd data-clone=Excel-export-clone bar-type=excel-export>Excel导入</a></dd>
+                    </dl>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+    <div class=layui-body>
+        <div class="layui-tab layui-tab-card" lay-filter=taskbar lay-allowclose=true>
+            <ul class=layui-tab-title>
+            </ul>
+            <div class=layui-tab-content>
+            </div>
+        </div>
+
+        <div class="overview-clone layui-hide">
+        <div class="overview padding15 content-tag layui-anim layui-anim-upbit clone" id=overview-div>
+            <h2-title title=欢迎使用时差买手后台></h2-title>
+
+
+
+
+
+        </div>
+</div>
+
+
+
+
+
+
+
+        <div class="classification-of-goods-classification-div-clone layui-hide">
+            <div id=classification-of-goods-classification-div class="padding15 content-tag layui-anim layui-anim-upbit clone">
+                <classification-of-goods-classification></classification-of-goods-classification>
+            </div>
+        </div>
+
+        <div class="delivery-management-div-clone layui-hide">
+            <div id=delivery-management-div class="padding15 content-tag layui-anim layui-anim-upbit clone">
+                <delivery-management></delivery-management>
+            </div>
+        </div>
+
+        <div class="delivery-management-detail-clone layui-hide">
+            <div id=delivery-management-detail-div class="padding15 content-tag layui-anim layui-anim-upbit clone">
+                <delivery-management-detail :data=data></delivery-management-detail>
+            </div>
+        </div>
+
+        <div class="option-template-clone layui-hide">
+            <div class="option-template padding15 content-tag layui-anim layui-anim-upbit clone" id=option-template-div>
+                <h2-title title=型号编辑></h2-title>
+                <form class=layui-form>
+                    <input name=id :value=id hidden>
+                        <div class=layui-form-item>
+                            <label class=layui-form-label>型号名称</label>
+                            <div class=layui-input-inline>
+                                <input type=text name=name lay-verify=title autocomplete=off placeholder=请输入名称 class=layui-input :value=name>
+                            </div>
+                    </div>
+                        <div class=layui-form-item v-for="(son,i) in list">
+                                <label class=layui-form-label>选项名称</label>
+                                <div class=layui-input-inline>
+                                    <input type=text name=elem-name lay-verify=title autocomplete=off placeholder=请输入名称 class=layui-input :value=son.name>
+                                </div>
+                            <button class="layui-btn layui-btn-danger delete-options" v-if="i>0"><i class=layui-icon>&#xe640;</i> </button>
+                     </div>
+                        <div class=layui-form-item>
+                            <label class=layui-form-label></label>
+                            <div class=layui-input-inline>
+                                <button class="layui-btn layui-btn-fluid add-options" type=button> 增加选项</button>
+                            </div>
+                        </div>
+                        <div class=layui-form-item>
+                            <label class=layui-form-label></label>
+                            <div class="layui-input-inline text-align-right">
+                                <button class=layui-btn lay-submit lay-filter=option-template type=rest> 保存</button>
+                            </div>
+                        </div>
+        </form>
+            </div>
+        </div>
+
+        <div class="classification_of_goods_div-clone layui-hide">
+        <div id=classification_of_goods_div class="padding15 content-tag layui-anim layui-anim-upbit clone">
+
+        <h2-title title=商品分类></h2-title>
+        <div class="classification_of_goods_searchTable layui-form">
+            搜索名称：
+            <div class=layui-inline>
+                <input class=layui-input name=name id=classification_of_goods_input autocomplete=off>
+            </div>
+            <button class="layui-btn classification-search-btn" lay-submit data-type=reload lay-filter=classification-table>搜索</button>
+
+            <div style="margin-top: 20px" class=at-least-one>
+                <input type=checkbox value=1 lay-submit class=classification-statu-btn title=启用 checked="" lay-filter=at-least-one name=status1>
+                <input type=checkbox value=0 lay-submit class=classification-statu-btn title=禁用 checked="" lay-filter=at-least-one name=status2>
+                <button type=button class="layui-btn layui-btn-sm classification-of-goods-crate-btn site-active-edit" type=button data-clone=classification-of-goods-edit-div-clone bar-type=classification_of_goods_edit>新建分类</button>
+            </div>
+
+        </div>
+        <table class=layui-hide id=classification_of_goods lay-filter=classification_of_goods></table>
+    </div>
+        </div>
+
+        <div class="classification-of-goods-bk-div-clone layui-hide">
+        <div id=classification-of-goods-bk-div class="padding15 content-tag layui-anim layui-anim-upbit clone">
+
+        <h2-title title=商品分类></h2-title>
+        <div class="classification_of_goods_searchTable layui-form">
+            搜索名称：
+            <div class=layui-inline>
+                <input class=layui-input name=name autocomplete=off>
+            </div>
+            <button class=layui-btn lay-submit data-type=reload lay-filter=classification-bk-table>搜索</button>
+
+            <div style="margin-top: 20px" class=at-least-one>
+                <input type=checkbox value=1 lay-submit class=classification-statu-btn title=启用 checked="" lay-filter=at-least-one name=status1>
+                <input type=checkbox value=0 lay-submit class=classification-statu-btn title=禁用 checked="" lay-filter=at-least-one name=status2>
+                <button type=button class="layui-btn layui-btn-sm classification-of-goods-bk-crate-btn site-active-edit" type=button data-clone=classification-of-goods-bk-edit-div-clone bar-type=classification-of-goods-bk-edit>新建分类</button>
+            </div>
+
+        </div>
+        <table class=layui-hide id=classification-of-goods-bk lay-filter=classification-of-goods-bk></table>
+    </div>
+        </div>
+
+        <div class="classification-of-goods-edit-div-clone layui-hide">
+        <div id=classification-of-goods-edit-div class="padding15 content-tag layui-anim layui-anim-upbit clone">
+            <h2-title title=编辑商品分类></h2-title>
+            <div class="layui-tab layui-tab-card">
+                <ul class=layui-tab-title>
+                <li class=layui-this>分类信息</li>
+                </ul>
+            <div class=layui-tab-content>
+                <div class="layui-tab-item layui-show">
+                    <form class="layui-form layui-form-pane" style="margin-top: 20px" lay-filter=classification-of-goods-edit-form>
+                        <input hidden name=id :value=clazz.id>
+                        <div class=layui-form-item>
+                            <label class=layui-form-label>分类名称</label>
+                            <div class=layui-input-block>
+                                <input type=text name=name lay-verify=must must=请输入分类名 autocomplete=off placeholder=请输入分类名 class=layui-input :value=clazz.name>
+                            </div>
+                        </div>
+                        <div class="layui-form-item layui-form-text">
+                            <label class=layui-form-label>分类描述</label>
+                            <div class=layui-input-block>
+                                <textarea placeholder=请输入内容 name=summary class=layui-textarea :value=clazz.summary></textarea>
+                            </div>
+                        </div>
+
+                        <div class=layui-form-item>
+                            <label class=layui-form-label>上级分类</label>
+                            <div class=layui-input-block>
+                                <select name=parentId lay-search="" :val=clazz.parentId>
+                                    <option value=0>直接选择或搜索选择</option>
+                                    <option v-for="option in options" :value=option.id v-text=option.name v-if="option.id == clazz.parentId" selected=selected></option>
+                                    <option :value=option.id v-text=option.name v-else></option>
+                                </select>
+                            </div>
+
+                        </div>   <div class=layui-form-item>
+                        <label class=layui-form-label>图片</label>
+                        <div class=layui-upload>
+                            <button type=button class=layui-btn name=img id=classification-of-goods-edit-upload>上传图片</button>
+                            <div class=layui-upload-list>
+                              <img class=layui-upload-img id=classification-of-goods-edit-upload-img :src='clazz.img?`${clazz.img}`:""' style="margin-left: 110px">
+                                  <p id=classification-of-goods-edit-upload-img-text></p>
+                            </div>
+                        </div>
+
+
+
+
+
+                    </div>
+                        <div class=layui-form-item>
+                            <label class=layui-form-label>导航栏显示</label>
+
+                            <div class=layui-input-block v-if="clazz.isShow == 1">
+                                <input type=checkbox name=isShow title=显示 value=1 checked=checked>
+
+                            </div>
+                            <div class=layui-input-block v-else>
+                                <input type=checkbox name=isShow title=显示 value=1>
+                            </div>
+                        </div>
+
+                        <div class=layui-form-item>
+                            <label class=layui-form-label>排序</label>
+                            <div class=layui-input-block>
+                                <input type=number name=priority lay-verify=int :value=clazz.priority autocomplete=off placeholder=请输入数字 class=layui-input>
+                            </div>
+                        </div>
+                        <div class=layui-form-item>
+                            <label class=layui-form-label>状态</label>
+                            <div class=layui-input-block v-if="clazz.status == 2">
+                                <input type=checkbox name=status lay-skin=switch value=1 lay-text=启用|禁用>
+                            </div>
+                            <div class=layui-input-block v-else>
+                                <input type=checkbox name=status lay-skin=switch value=1 lay-text=启用|禁用 checked=checked>
+                            </div>
+                        </div>
+                        <div class=layui-form-item>
+
+                            <div class=layui-input-inline v-if="clazz.id >0">
+                            <button class="layui-btn layui-btn-fluid" lay-submit lay-filter=classification-of-goods-edit>修改</button>
+                            </div>
+                            <div class=layui-input-inline v-else>
+                                <button class="layui-btn layui-btn-fluid" type=reset lay-submit lay-filter=classification-of-goods-edit>保存</button>
+                            </div>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+            </div>
+        </div>
+        </div>
+
+        <div class="classification-of-goods-bk-edit-div-clone layui-hide">
+        <div id=classification-of-goods-bk-edit-div class="padding15 content-tag layui-anim layui-anim-upbit clone">
+            <h2-title title=编辑商品分类></h2-title>
+            <div class="layui-tab layui-tab-card">
+                <ul class=layui-tab-title>
+                <li class=layui-this>分类信息</li>
+                </ul>
+            <div class=layui-tab-content>
+                <div class="layui-tab-item layui-show">
+                    <form class="layui-form layui-form-pane" style="margin-top: 20px" lay-filter=classification-of-goods-bk-edit-form>
+                        <input hidden name=id :value=clazz.id>
+                        <div class=layui-form-item>
+                            <label class=layui-form-label>分类名称</label>
+                            <div class=layui-input-block>
+                                <input type=text name=name lay-verify=must must=请输入分类名 autocomplete=off placeholder=请输入分类名 class=layui-input :value=clazz.name>
+                            </div>
+                        </div>
+                        <div class="layui-form-item layui-form-text">
+                            <label class=layui-form-label>分类描述</label>
+                            <div class=layui-input-block>
+                                <textarea placeholder=请输入内容 name=summary class=layui-textarea :value=clazz.summary></textarea>
+                            </div>
+                        </div>
+
+                        <div class=layui-form-item>
+                            <label class=layui-form-label>上级分类</label>
+                            <div class=layui-input-block>
+                                <select name=parentId lay-search="" :val=clazz.parentId>
+                                    <option value=0>直接选择或搜索选择</option>
+                                    <option v-for="option in options" :value=option.id v-text=option.name v-if="option.id == clazz.parentId" selected=selected></option>
+                                    <option :value=option.id v-text=option.name v-else></option>
+                                </select>
+                            </div>
+
+                        </div>   <div class=layui-form-item>
+                        <label class=layui-form-label>图片</label>
+                        <div class=layui-upload>
+                            <button type=button class=layui-btn name=img id=classification-of-goods-bk-edit-upload>上传图片</button>
+                            <div class=layui-upload-list>
+                              <img class=layui-upload-img id=classification-of-goods-bk-edit-upload-img style="margin-left: 110px" :src='clazz.img?`${clazz.img}`:""'>
+                                  <p id=classification-of-goods-bk-edit-upload-img-text></p>
+                            </div>
+                        </div>
+
+
+
+
+
+                    </div>
+                        <div class=layui-form-item>
+                            <label class=layui-form-label>导航栏显示</label>
+                            <div class=layui-input-block v-if="clazz.isShow == 1">
+                                <input type=checkbox name=isShow title=显示 value=1 checked=checked>
+
+                            </div>
+                            <div class=layui-input-block v-else>
+                                <input type=checkbox name=isShow title=显示 value=1>
+                            </div>
+                        </div>
+
+                        <div class=layui-form-item>
+                            <label class=layui-form-label>排序</label>
+                            <div class=layui-input-block>
+                                <input type=number name=priority lay-verify=int :value=clazz.priority autocomplete=off placeholder=请输入数字 class=layui-input>
+                            </div>
+                        </div>
+                        <div class=layui-form-item>
+                            <label class=layui-form-label>状态</label>
+                            <div class=layui-input-block v-if="clazz.status == 2">
+                                <input type=checkbox name=status lay-skin=switch value=1 lay-text=启用|禁用>
+                            </div>
+                            <div class=layui-input-block v-else>
+                                <input type=checkbox name=status lay-skin=switch value=1 lay-text=启用|禁用 checked=checked>
+                            </div>
+                        </div>
+                        <div class=layui-form-item>
+
+                            <div class=layui-input-inline v-if="clazz.id >0">
+                            <button class="layui-btn layui-btn-fluid" lay-submit lay-filter=classification-of-goods-bk-edit>修改</button>
+                            </div>
+                            <div class=layui-input-inline v-else>
+                                <button class="layui-btn layui-btn-fluid" type=reset lay-submit lay-filter=classification-of-goods-bk-edit>保存</button>
+                            </div>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+            </div>
+        </div>
+        </div>
+
+        <div class="classification-of-goods-administration-div-clone layui-hide">
+            <div id=classification-of-goods-administration-div class="padding15 content-tag layui-anim layui-anim-upbit clone">
+            <h2-title title=商品管理></h2-title>
+
+
+
+
+
+                <div class="layui-tab-content layui-form" lay-filter=classification-of-goods-administration-form>
+                    <div class="layui-tab-item layui-show goods-list">
+                        <div class=layui-collapse>
+                            <div class=layui-colla-item>
+                                <h2 class=layui-colla-title>筛选条件</h2>
+                                <div class="layui-colla-content layui-show">
+                                    <div class=layui-form lay-filter=classification-of-goods-administration-form-s>
+                                        <div class=layui-form-item>
+                                            <label class="layui-form-label auto-width">商品名</label>
+                                            <div class=layui-input-inline><input class=layui-input name=name></div>
+                                            <label class="layui-form-label auto-width">品牌名</label>
+                                            <div class=layui-input-inline><select lay-search name=brandId>
+                                                <option value=0> 请选择</option>
+                                                <option v-for="brand in brandList" :value=brand.id v-text=brand.name></option>
+                                            </select>
+                                            </div>
+                                            <label class="layui-form-label auto-width">商品分类</label>
+                                            <div class=layui-input-inline><select lay-search name=categoryId>
+                                                <option value=0> 请选择</option>
+                                                <option v-for="category in categoryList" :value=category.id v-text=category.name></option>
+                                            </select></div>
+                                    </div>
+                                        <div class=layui-form-item>
+                                            <label class="layui-form-label auto-width">状态</label>
+                                            <div class="layui-input-inline at-least-one">
+                                                <input type=checkbox value=1 lay-submit class=classification-statu-btn title=上架 checked="" lay-filter=at-least-one name=status1>
+                                                <input type=checkbox value=0 lay-submit class=classification-statu-btn title=下架 checked="" lay-filter=at-least-one name=status2>
+                                            </div>
+                                            <button lay-submit class=layui-btn type=button lay-filter=classification-of-goods-administration-form-s-submit> 筛选</button>
+                                            <button class="layui-btn add-goods" type=button> 增加商品</button>
+                                        </div>
+                                        <div class="">
+                                            <table class="layui-table layui-hide" id=goods-management-list-table lay-filter=goods-management-list-table>  </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+        </div>
+        </div>
+
+        <div class="classification-of-goods-administration-bk-div-clone layui-hide">
+            <div id=classification-of-goods-administration-bk-div class="padding15 content-tag layui-anim layui-anim-upbit clone">
+                <h2-title title=商品管理></h2-title>
+
+
+
+
+
+                    <div class="layui-tab-content layui-form" lay-filter=classification-of-goods-administration-form-bk>
+                        <div class="layui-tab-item layui-show goods-list">
+                            <div class=layui-collapse>
+                                <div class=layui-colla-item>
+                                    <h2 class=layui-colla-title>筛选条件</h2>
+                                    <div class="layui-colla-content layui-show">
+                                        <div class=layui-form lay-filter=classification-of-goods-administration-form-s-bk>
+                                            <div class=layui-form-item>
+                                                <label class="layui-form-label auto-width">商品名</label>
+                                                <div class=layui-input-inline><input class=layui-input name=name></div>
+                                                <label class="layui-form-label auto-width">品牌名</label>
+                                                <div class=layui-input-inline><select lay-search name=brandId>
+                                                    <option value=0> 请选择</option>
+                                                    <option v-for="brand in brandList" :value=brand.id v-text=brand.name></option>
+                                                </select>
+                                                </div>
+                                                <label class="layui-form-label auto-width">商品分类</label>
+                                                <div class=layui-input-inline><select lay-search name=categoryId>
+                                                    <option value=0> 请选择</option>
+                                                    <option v-for="category in categoryList" :value=category.id v-text=category.name></option>
+                                                </select></div>
+                                            </div>
+                                            <div class=layui-form-item>
+                                                <label class="layui-form-label auto-width">状态</label>
+                                                <div class="layui-input-inline at-least-one">
+                                                    <input type=checkbox value=1 lay-submit class=classification-statu-btn title=上架 checked="" lay-filter=at-least-one name=status1>
+                                                    <input type=checkbox value=0 lay-submit class=classification-statu-btn title=下架 checked="" lay-filter=at-least-one name=status2>
+                                                </div>
+                                                <button lay-submit class=layui-btn type=button lay-filter=classification-of-goods-administration-form-s-submit-bk> 筛选</button>
+                                                <button lay-submit class="layui-btn add-goods-bk" type=button> 增加商品</button>
+                                            </div>
+                                            <div class="">
+                                                <table class="layui-table layui-hide" id=goods-management-list-table-bk lay-filter=goods-management-list-table-bk>  </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+        </div>
+        </div>
+
+        <div class="classification-of-goods-administration-layer-div-clone layui-hide">
+            <div id=classification-of-goods-administration-layer-div class="padding15 content-tag layui-anim layui-anim-upbit clone">
+                <div class="layui-tab layui-tab-card" lay-filter=classification-of-goods-administration-bar>
+                    <ul class="layui-tab-title layui-hide sku-title">
+                        <li class=layui-this lay-id=classification-of-goods-administration-info>商品信息</li>
+                        <li lay-id=classification-of-goods-administration-model>型号（SKU）&库存</li>
+
+                    </ul>
+                    <div class=layui-tab-content>
+                        <div class="layui-tab-item layui-show">
+                            <h2-title title=商品管理></h2-title>
+                            <form class="layui-form layui-form-pane" lay-filter=classification-of-goods-form style="margin-top: 20px">
+                                <div class="layui-form-item text-center">
+                                    <div class=layui-upload>
+                                        <button type=button class=layui-btn id=goods-main-img>点我上传主图</button>
+                                        <div class=layui-upload-list>
+                                            <img class=layui-upload-img id=goods-main-img-view :src=info.goodIcon>
+                                            <p id=goods-main-img-view-text></p>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+
+
+
+
+
+
+
+                                <div class=layui-form-item>
+                                    <label class=layui-form-label>商品名称</label>
+                                    <div class=layui-input-block>
+                                        <input name=id :value=info.id type=text hidden>
+                                        <input type=text name=name lay-verify=must must=请填写商品名 autocomplete=off placeholder=请输入商品名 class=layui-input v-model=info.name>
+                                    </div>
+                                </div>
+                                <div class=layui-form-item>
+                                    <label class=layui-form-label>商品描述</label>
+                                    <div class="layui-input-block editor">
+                                    </div>
+                                </div>
+                                <div class=layui-form-item>
+                                    <label class=layui-form-label>商品分类</label>
+                                    <div class=layui-input-block>
+                                        <span v-for="category in categoryList">
+                                            <span v-if="category.status==1"><input type=checkbox name=categoryIds checked=checked :value=category.id :title=category.name></span>
+                                            <span v-else><input type=checkbox name=categoryIds :value=category.id :title=category.name></span>
+
+                                        </span>
+                                    </div>
+                                </div>
+
+                                <div class=layui-form-item>
+                                    <label class=layui-form-label>品牌</label>
+                                    <div class=layui-input-block>
+                                        <select name=brandId lay-search="" lay-verify=selectthan0 info=品牌>
+                                            <option value=0>请选择</option>
+                                            <option v-for="brand in brandListSelect" :value=brand.id v-text=brand.name v-if="brand.status==1" selected=selected></option>
+                                                <option :value=brand.id v-text=brand.name v-else></option>
+
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class=layui-form-item>
+                                    <label class=layui-form-label>缺货提示</label>
+                                    <div class=layui-input-block>
+                                        <select name=shortageDisplay>
+                                            <option value=无货 v-if="info.shortageDisplay == '无货'" selected=selected>无货</option>
+                                            <option value=无货 v-else>无货</option>
+                                            <option value=2-3天到货 v-if="info.shortageDisplay == '2-3天到货'" selected=selected>2-3天到货</option>
+                                            <option value=2-3天到货>2-3天到货</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class=layui-form-item>
+                                    <label class=layui-form-label>配送费</label>
+                                    <div class=layui-input-block>
+                                        <input type=number name=distributionFee autocomplete=off v-model=info.distributionFee class=layui-input>
+                                    </div>
+                                </div>
+                                <div class=layui-form-item>
+                                    <label class=layui-form-label>热门级别</label>
+                                    <div class=layui-input-block>
+                                        <select name=hotLevel lay-search="">
+                                            <option v-for="hotlevel in hotLevelSelect" v-if="hotlevel.status==1" selected=selected :value=hotlevel.value v-text=hotlevel.name></option>
+                                            <option v-else :value=hotlevel.value v-text=hotlevel.name></option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class=layui-form-item>
+                                    <label class=layui-form-label>购买减库存</label>
+                                    <div class=layui-input-block v-if="info.status ==1">
+                                        <input type=checkbox name=isReduceStock value=1 lay-skin=switch checked=checked lay-text=减|不减>
+                                    </div>
+                                    <div class=layui-input-block v-else>
+                                        <input type=checkbox name=isReduceStock value=1 lay-skin=switch lay-text=减|不减>
+                                    </div>
+                                </div>
+                                <div class="layui-form-item text-center">
+                                    <button class="layui-btn layui-btn-normal" type=reset lay-submit lay-filter=product-edit v-text=goods_edit_btn></button>
+                                </div>
+                            </form>
+                        </div>
+                        <div class=layui-tab-item>
+                            <h2-title :title=goodsname></h2-title>
+                                <div class=layui-form>
+                                       <sku-table :sku-data=skuData :model-data=data :model=model></sku-table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        <div class="classification-of-goods-administration-bk-layer-div-clone layui-hide">
+            <div id=classification-of-goods-administration-bk-layer-div class="padding15 content-tag layui-anim layui-anim-upbit clone">
+                <div class="layui-tab layui-tab-card" lay-filter=classification-of-goods-administration-bar-bk>
+                    <ul class="layui-tab-title layui-hide sku-title-bk">
+                        <li class=layui-this lay-id=classification-of-goods-administration-info-bk>商品信息</li>
+                        <li lay-id=classification-of-goods-administration-model-bk>型号（SKU）&库存</li>
+
+                    </ul>
+                    <div class=layui-tab-content>
+                        <div class="layui-tab-item layui-show">
+                            <h2-title title=商品管理></h2-title>
+                            <form class="layui-form layui-form-pane" lay-filter=classification-of-goods-form-bk style="margin-top: 20px">
+                                <div class="layui-form-item text-center">
+                                    <div class=layui-upload>
+                                        <button type=button class=layui-btn id=goods-main-img-bk>点我上传主图</button>
+                                        <div class=layui-upload-list>
+                                            <img class=layui-upload-img id=goods-main-img-view-bk :src=info.goodIcon>
+                                            <p id=goods-main-img-view-text-bk></p>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+
+
+
+
+
+
+
+                                <div class=layui-form-item>
+                                    <label class=layui-form-label>商品名称</label>
+                                    <div class=layui-input-block>
+                                        <input name=id :value=info.id type=text hidden>
+                                        <input type=text name=name lay-verify=must must=请填写商品名 autocomplete=off placeholder=请输入商品名 class=layui-input v-model=info.name>
+                                    </div>
+                                </div>
+                                <div class=layui-form-item>
+                                    <label class=layui-form-label>商品描述</label>
+                                    <div class="layui-input-block editor">
+                                    </div>
+                                </div>
+                                <div class=layui-form-item>
+                                    <label class=layui-form-label>商品分类</label>
+                                    <div class=layui-input-block>
+                                        <span v-for="category in categoryList">
+                                            <span v-if="category.status==1"><input type=checkbox name=categoryIds checked=checked :value=category.id :title=category.name></span>
+                                            <span v-else><input type=checkbox name=categoryIds :value=category.id :title=category.name></span>
+
+                                        </span>
+                                    </div>
+                                </div>
+
+                                <div class=layui-form-item>
+                                    <label class=layui-form-label>品牌</label>
+                                    <div class=layui-input-block>
+                                        <select name=brandId lay-search="" lay-verify=selectthan0 info=品牌>
+                                            <option value=0>请选择</option>
+                                            <option v-for="brand in brandListSelect" :value=brand.id v-text=brand.name v-if="brand.status==1" selected=selected></option>
+                                            <option :value=brand.id v-text=brand.name v-else></option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class=layui-form-item>
+                                    <label class=layui-form-label>缺货提示</label>
+                                    <div class=layui-input-block>
+                                        <select name=shortageDisplay>
+                                            <option value=无货 v-if="info.shortageDisplay == '无货'" selected=selected>无货</option>
+                                            <option value=无货 v-else>无货</option>
+                                            <option value=2-3天到货 v-if="info.shortageDisplay == '2-3天到货'" selected=selected>2-3天到货</option>
+                                            <option value=2-3天到货>2-3天到货</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class=layui-form-item>
+                                    <label class=layui-form-label>配送费</label>
+                                    <div class=layui-input-block>
+                                        <input type=number name=distributionFee autocomplete=off v-model=info.distributionFee class=layui-input>
+                                    </div>
+                                </div>
+                                <div class=layui-form-item>
+                                    <label class=layui-form-label>热门级别</label>
+                                    <div class=layui-input-block>
+                                        <select name=hotLevel lay-search="">
+                                            <option v-for="hotlevel in hotLevelSelect" v-if="hotlevel.status==1" selected=selected :value=hotlevel.value v-text=hotlevel.name></option>
+                                            <option v-else :value=hotlevel.value v-text=hotlevel.name></option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class=layui-form-item>
+                                    <label class=layui-form-label>购买减库存</label>
+                                    <div class=layui-input-block v-if="info.status ==1">
+                                        <input type=checkbox name=isReduceStock value=1 lay-skin=switch checked=checked lay-text=减|不减>
+                                    </div>
+                                    <div class=layui-input-block v-else>
+                                        <input type=checkbox name=isReduceStock value=1 lay-skin=switch lay-text=减|不减>
+                                    </div>
+                                </div>
+                                <div class="layui-form-item text-center">
+                                    <button class="layui-btn layui-btn-normal" type=reset lay-submit lay-filter=product-edit-bk v-text=goods_edit_btn></button>
+                                </div>
+                            </form>
+                        </div>
+                        <div class=layui-tab-item>
+                            <h2-title :title=goodsname></h2-title>
+                            <div class=layui-form>
+                                <sku-table-bk :sku-data=skuData :model-data=data :model=model></sku-table-bk>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="brand-list-div-clone layui-hide">
+            <div id=brand-list-div class="padding15 content-tag layui-anim layui-anim-upbit clone">
+                <h2-title title=品牌管理></h2-title>
+                <div class="classification_of_goods_searchTable layui-form">
+                    搜索名称：
+                    <div class=layui-inline>
+                        <input class=layui-input name=name id=brand-list-div-input autocomplete=off>
+                    </div>
+                    <button class=layui-btn lay-submit data-type=reload lay-filter=brand-list-div-table>搜索</button>
+
+                    <div style="margin-top: 20px" class=at-least-one>
+
+
+                        <button class="layui-btn layui-btn-sm bran-crate-btn site-active-edit" data-clone=brand-management-div-clone bar-type=brand-management>新建品牌</button>
+                    </div>
+
+                </div>
+
+                <table class=layui-hide id=brand-list-div-table lay-filter=brand-list-div-table></table>
+
+            </div>
+        </div>
+
+        <div class="brand-management-div-clone layui-hide">
+        <form class="layui-form layui-form-pane layui-anim layui-anim-upbit clone" id=brand-management-div style="margin-top: 20px">
+            <div class="layui-form-item text-center">
+                <div class=layui-upload>
+                    <button type=button class=layui-btn id=brand-main-img>点我上传品牌logo</button>
+                    <div class=layui-upload-list>
+                        <img class=layui-upload-img id=brand-main-img-view :src=data.img>
+                        <p id=brand-main-img-view-text></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class=layui-form-item>
+                <label class=layui-form-label>品牌名称</label>
+                <div class=layui-input-block>
+                    <input type=text name=name autocomplete=off placeholder=请输入品牌名 class=layui-input :value=data.name>
+                    <input hidden name=id :value=data.id>
+                </div>
+            </div>
+
+            <div class=layui-form-item>
+                <label class=layui-form-label>品牌排序</label>
+                <div class=layui-input-block>
+                    <input type=text name=priority autocomplete=off placeholder=请输入品牌权重 class=layui-input :value=data.priority>
+                </div>
+            </div>
+            <div class=layui-form-item>
+                <label class=layui-form-label>品牌类型</label>
+                <div class=layui-input-block v-if="data.type==1">
+                    <input type=radio name=brandType value=1 title=韩国 checked=checked>
+                    <input type=radio name=brandType value=2 title=欧美>
+                </div>
+                <div class=layui-input-block v-else>
+                    <input type=radio name=brandType value=1 title=韩国>
+                    <input type=radio name=brandType value=2 title=欧美 checked=checked>
+                </div>
+            </div>
+
+            <div class=layui-form-item>
+
+                <div class=layui-input-block>
+                    <button class=layui-btn lay-submit lay-filter=brand-management-submit type=reset>保存</button>
+                </div>
+            </div>
+
+        </form>
+
+        </div>
+
+        <div class="special-offer-clone layui-hide">
+            <div id=special-offer class="padding15 content-tag layui-anim layui-anim-upbit clone">
+                <special-offer></special-offer>
+            </div>
+        </div>
+
+        <div class="special-offer-edit-clone layui-hide">
+            <div id=special-offer-edit class="padding15 content-tag layui-anim layui-anim-upbit clone">
+                <special-offer-edit :special-offer=specialOffer class=layui-form></special-offer-edit>
+            </div>
+        </div>
+
+        <div class="free-shipping-clone layui-hide">
+            <div id=free-shipping class="padding15 content-tag layui-anim layui-anim-upbit clone">
+                <free-shipping :shipping-data=data></free-shipping>
+            </div>
+        </div>
+
+        <div class="stock-order-list-clone layui-hide">
+            <div id=stock-order-list-div class="padding15 content-tag layui-anim layui-anim-upbit clone">
+                <h2-title title=订单列表></h2-title>
+                <div class=layui-collapse>
+                    <div class=layui-colla-item>
+                        <h2 class=layui-colla-title>筛选条件</h2>
+                        <div class="layui-colla-content layui-show">
+                            <div class=layui-form lay-filter=stock-order-search-form>
+                                <div class=layui-inline>   <input type=text name=orderSn placeholder=订单ID autocomplete=off class=layui-input></div>
+                                <div class=layui-inline>  <input type=text name=phone placeholder=客户手机 autocomplete=off class=layui-input></div>
+                                <div class=layui-inline>   <select name=orderStatus>
+                                    <option value="">订单状态</option>
+                                    <option value="">全部</option>
+                                    <option value=waitforpay>待支付</option>
+                                    <option value=pendingDelivery>待发货</option>
+                                    <option value=delivered>已发货</option>
+                                    <option value=complete>已完成</option>
+                                    <option value=cancel>已取消</option>
+                                    <option value=refunding>退款申请</option>
+                                    <option value=refundSuccess>退款成功</option>
+                                    <option value=refundError>退款失败</option>
+                                </select></div>
+                                <div class=layui-inline>  <input type=text name=startTime placeholder=订单生成日期（开始） autocomplete=off class="layui-input order-start"></div>
+                                <div class=layui-inline>   <input type=text name=endTime placeholder=订单生成日期（结束） autocomplete=off class="layui-input order-end"></div>
+                                <div class=layui-inline><button class=layui-btn lay-submit lay-filter=stock-order-search-form-submit>筛选</button></div>
+
+                            </div>
+                        </div>
+                <table class=layui-hide id=stock-order-list-table lay-filter=stock-order-list-table></table>
+
+
+            </div>
+        </div>
+            </div>
+        </div>
+
+        <div class="stock-order-list-clone-bk layui-hide">
+            <div id=stock-order-list-div-bk class="padding15 content-tag layui-anim layui-anim-upbit clone">
+                <h2-title title=订单列表></h2-title>
+                <div class=layui-collapse>
+                    <div class=layui-colla-item>
+                        <h2 class=layui-colla-title>筛选条件</h2>
+                        <div class="layui-colla-content layui-show">
+                            <div class=layui-form lay-filter=stock-order-search-form>
+                                <div class=layui-inline> <input type=text name=orderSn placeholder=订单ID autocomplete=off class=layui-input></div>
+                                <div class=layui-inline> <input type=text name=phone placeholder=客户手机 autocomplete=off class=layui-input></div>
+                                <div class=layui-inline>  <select name=orderStatus>
+                                    <option value="">订单状态</option>
+                                    <option value="">全部</option>
+                                    <option value=waitforpay>待支付</option>
+                                    <option value=pendingOrder>待接单</option>
+                                    <option value=takingOrder>待分配买手</option>
+                                    <option value=pengdingBuy>抢购中</option>
+                                    <option value=waitconfirm>待确认</option>
+                                    <option value=noGoods>无货</option>
+                                    <option value=allReject>全部驳回</option>
+                                    <option value=overtime>超时</option>
+                                    <option value=pendingDelivery>待发货</option>
+                                    <option value=delivered>已发货</option>
+                                    <option value=complete>已完成</option>
+                                    <option value=cancel>已取消</option>
+                                    <option value=refunding>退款申请</option>
+                                    <option value=refundSuccess>退款成功</option>
+                                    <option value=refundError>退款失败</option>
+                                </select></div>
+                                <div class=layui-inline> <input type=text name=startTime placeholder=订单生成日期（开始） autocomplete=off class="layui-input order-start"></div>
+                                <div class=layui-inline>  <input type=text name=endTime placeholder=订单生成日期（结束） autocomplete=off class="layui-input order-end"></div>
+                                <div class=layui-inline> <button class=layui-btn lay-submit lay-filter=stock-order-search-form-submit-bk>筛选</button></div>
+                                <div class=layui-inline>   <button class=layui-btn type=button lay-submit lay-filter=waybill-number-submit-bk>批量填写运单号</button></div>
+                                <div class=layui-inline>   <button class=layui-btn type=button lay-submit lay-filter=taking-order>批量接单</button></div>
+                                <div class=layui-inline>   <button class=layui-btn type=button lay-submit lay-filter=order-confirm>批量确认</button></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                            </div>
+                        </div>
+                <table class=layui-hide id=stock-order-list-table-bk lay-filter=stock-order-list-table-bk></table>
+            </div>
+        </div>
+            </div>
+        </div>
+
+        <div class="commodity-return-list-clone layui-hide">
+            <div id=commodity-return-list-div class="padding15 content-tag layui-anim layui-anim-upbit clone">
+                <h2-title title=订单列表></h2-title>
+                <div class=layui-collapse>
+                    <div class=layui-colla-item>
+                        <h2 class=layui-colla-title>筛选条件</h2>
+                        <div class="layui-colla-content layui-show">
+                            <div class=layui-form lay-filter=commodity-return-list-clone-form>
+                                <div class=layui-inline>     <input type=text name=refundSn placeholder=退换ID autocomplete=off class=layui-input></div>
+                                <div class=layui-inline>        <input type=text name=orderSn placeholder=订单ID autocomplete=off class=layui-input></div>
+                                <div class=layui-inline>          <input type=text name=phone placeholder=客户手机 autocomplete=off class=layui-input></div>
+                                <div class=layui-inline>    <select name=orderStatus>
+                                    <option value="">订单状态</option>
+                                    <option value="">全部</option>
+                                    <option value=refunding>退款申请</option>
+                                    <option value=refundSuccess>退款成功</option>
+                                    <option value=refundError>退款失败</option>
+                                </select></div>
+                                <div class=layui-inline>     <button class=layui-btn lay-submit lay-filter=commodity-return-list-clone-form-search>筛选</button></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                            </div>
+                        </div>
+                <table class=layui-hide id=commodity-return-list-table lay-filter=commodity-return-list-table></table>
+            </div>
+        </div>
+            </div>
+        </div>
+
+        <div class="stock-order-edit-clone layui-hide">
+            <div id=stock-order-edit-div class="padding15 content-tag layui-anim layui-anim-upbit clone">
+                <h2-title title=订单查看></h2-title>
+                <div class="layui-row layui-col-space10">
+                    <div class=layui-col-xs6>
+                        <div class="">
+                            <table class=layui-table>
+                                <thead>
+                                <tr>
+                                    <th colspan=2>订单编号${{orderSn}}</th>
+                                </tr>
+                                </thead>
+                                <tr>
+                                    <td>订单日期</td>
+                                    <td>${{createTime}}</td>
+                                </tr>
+                                <tr>
+                                    <td>支付方式</td>
+                                    <td>${{payType}}</td>
+                                </tr>
+                                <tr>
+                                    <td>运费</td>
+                                    <td>${{distributionFee}}元</td>
+                                </tr>
+
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class=layui-col-xs6>
+                        <div class="">
+                            <table class=layui-table>
+                                <thead>
+                                <tr>
+                                    <th colspan=2>客户明细</th>
+                                </tr>
+                                </thead>
+                                <tr>
+                                    <td>姓名</td>
+                                    <td>${{nickname}}</td>
+                                </tr>
+                                <tr>
+                                    <td>EMAILL</td>
+                                    <td>${{email}}</td>
+                                </tr>
+                                <tr>
+                                    <td>电话</td>
+                                    <td>${{phone}}</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <h2-title title=订单资料></h2-title>
+                <div class=padding15>
+                    <div class="layui-row shipping-address-title">配送地址</div>
+                    <div class="layui-row shipping-address-content">${{address.receiverName}}（${{address.receiverPhone}}） ${{address.province}} ${{address.city}} ${{address.area}}${{address.address}}</div>
+                    <button class=layui-btn @click=updateAdd v-if='orderStatus=="pendingDelivery"'>修改地址</button>
+
+                    <table class=layui-table id=order-detail-table lay-filter=order-detail-table>
+
+                    </table>
+                </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <h2-title title=订单记录></h2-title>
+
+                <ul class=layui-timeline>
+                    <li class=layui-timeline-item v-for="h in history">
+                        <i class="layui-icon layui-timeline-axis">&#xe63f;</i>
+                        <div class="layui-timeline-content layui-text">
+                            <h3 class=layui-timeline-title>${{h.createTime}}：<span>${{h.remark}}</span> </h3>
+                            <p>
+
+                            </p>
+                        </div>
+                    </li>
+
+                </ul>
+
+
+            </div>
+        </div>
+
+        <div class="stock-order-edit-clone-bk layui-hide">
+            <div id=stock-order-edit-div-bk class="padding15 content-tag layui-anim layui-anim-upbit clone">
+                <h2-title title=订单查看></h2-title>
+                <div class="layui-row layui-col-space10">
+                    <div class=layui-col-xs6>
+                        <div class="">
+                            <table class=layui-table>
+                                <thead>
+                                <tr>
+                                    <th colspan=2>订单编号${{orderSn}}</th>
+                                </tr>
+                                </thead>
+                                <tr>
+                                    <td>订单日期</td>
+                                    <td>${{createTime}}</td>
+                                </tr>
+                                <tr>
+                                    <td>支付方式</td>
+                                    <td>${{payType}}</td>
+                                </tr>
+                                <tr>
+                                    <td>运费</td>
+                                    <td>${{distributionFee}}元</td>
+                                </tr>
+
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class=layui-col-xs6>
+                        <div class="">
+                            <table class=layui-table>
+                                <thead>
+                                <tr>
+                                    <th colspan=2>客户明细</th>
+                                </tr>
+                                </thead>
+                                <tr>
+                                    <td>姓名</td>
+                                    <td>${{nickname}}</td>
+                                </tr>
+                                <tr>
+                                    <td>EMAILL</td>
+                                    <td>${{email}}</td>
+                                </tr>
+                                <tr>
+                                    <td>电话</td>
+                                    <td>${{phone}}</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <h2-title title=订单资料></h2-title>
+                <div class=padding15>
+                    <div class="layui-row shipping-address-title">配送地址</div>
+                    <div class="layui-row shipping-address-content">${{address.receiverName}}（${{address.receiverPhone}}） ${{address.province}} ${{address.city}} ${{address.area}}${{address.address}}</div>
+                    <button class=layui-btn @click=updateAdd v-if='orderStatus=="pendingDelivery"'>修改地址</button>
+
+                    <table class="layui-table dh" id=order-detail-table-bk lay-filter=order-detail-table-bk>
+
+                    </table>
+                </div>
+                <div v-if="orderStatus != 'waitforpay'&&orderStatus != 'cancel'&&orderStatus != 'noGoods'&&orderStatus != 'refundSuccess'">
+                <h2-title title=物流信息></h2-title>
+                <div class=layui-form>
+                    <div class=layui-form-item>
+                        <label class=layui-form-label>运单号</label>
+                        <div class=layui-input-inline><div class=layui-form-mid>${{company}}&nbsp;&nbsp;${{deliverySn}}</div></div>
+                        <button class=layui-btn @click=openYundan> ${{deliverySn?'修改':'添加'}}</button>
+                    </div>
+                    <ul class=layui-timeline>
+                        <li class=layui-timeline-item v-if="deliveryList.length<1 ">
+                            <i class="layui-icon layui-timeline-axis">&#xe63f;</i>
+                            <div class="layui-timeline-content layui-text">
+                                <h3 class=layui-timeline-title></h3>
+                                <p>
+                                    暂无物流信息
+                                </p>
+                            </div>
+                        </li>
+                        <li class=layui-timeline-item v-for="h in deliveryList ">
+                            <i class="layui-icon layui-timeline-axis">&#xe63f;</i>
+                            <div class="layui-timeline-content layui-text">
+                                <h3 class=layui-timeline-title>${{h.time}}</h3>
+                                <p>
+                                    ${{h.context}}
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                 </div>
+
+                <h2-title title=订单记录></h2-title>
+
+                <ul class=layui-timeline>
+                    <li class=layui-timeline-item v-for="h in history">
+                        <i class="layui-icon layui-timeline-axis">&#xe63f;</i>
+                        <div class="layui-timeline-content layui-text">
+                            <h3 class=layui-timeline-title>${{h.createTime}}：<span>${{h.remark}}</span> </h3>
+                            <p>
+
+                            </p>
+                        </div>
+                    </li>
+
+                </ul>
+
+
+            </div>
+        </div>
+
+        <div class="commodity-return-edit-clone layui-hide">
+            <div id=commodity-return-edit-div class="padding15 content-tag layui-anim layui-anim-upbit clone">
+                <h2-title title=订单查看></h2-title>
+                <div class="layui-row layui-col-space10">
+                    <div class=layui-col-xs6>
+                        <div class="">
+                            <table class=layui-table>
+                                <tr>
+                                    <td>订单编号</td>
+                                    <td>${{orderSn}}</td>
+                                </tr>
+                                <tr>
+                                    <td>支付方式</td>
+                                    <td>${{payType}}</td>
+                                </tr>
+                                <tr>
+                                    <td>运费</td>
+                                    <td>${{distributionFee}}元</td>
+                                </tr>
+                                <tr>
+                                    <td>总价</td>
+                                    <td>${{orderTotal}}元</td>
+                                </tr>
+
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class=layui-col-xs6>
+                        <div class="">
+                            <table class=layui-table>
+                                <tr>
+                                    <td>姓名</td>
+                                    <td>${{nickname}}</td>
+                                </tr>
+                                <tr>
+                                    <td>已退款</td>
+                                    <td>${{hasRefund}}</td>
+                                </tr>
+                                <tr>
+                                    <td>退款原因</td>
+                                    <td>${{remark}}</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class=padding15>
+                    <table class=layui-table id=commodity-return-edit-table>
+                    </table>
+                </div>
+                <div class=layui-form v-if="orderStatus=='refunding'">
+                    <div class=layui-form-item>
+                        <label class=layui-form-label>退款金额</label>
+                        <div class=layui-input-inline>
+                            <input type=text name=price type=number autocomplete=off class=layui-input>
+                        </div>
+                    </div>
+                    <div class=layui-form-item>
+                        <div class=layui-input-block>
+                            <button type=button class=layui-btn lay-submit lay-filter=commodity-return-dismissal>申请驳回</button>
+                            <button type=button class=layui-btn lay-submit lay-filter=commodity-return-refund>退款</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="distributive-buyer-clone layui-hide">
+            <div id=distributive-buyer-div class="padding15 content-tag layui-anim layui-anim-upbit clone">
+                <h2-title title=分配买手></h2-title>
+                <div class="layui-row layui-col-space10">
+                    <div class=layui-col-xs6>
+                        <div class="">
+                            <table class=layui-table>
+                                <tr>
+                                    <td>订单编号</td>
+                                    <td>${{orderSn}}</td>
+                                </tr>
+                                <tr>
+                                    <td>状态</td>
+                                    <td>${{orderStatu}}</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class=layui-col-xs6>
+                        <div class="">
+                            <table class=layui-table>
+                                <tr>
+                                    <td>客户手机</td>
+                                    <td>${{phone}}</td>
+                                </tr>
+                                <tr>
+                                    <td>剩余时间</td>
+                                    <td>${{restTime}}</td>
+                                </tr>
+
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                    <div class=layui-form-item>
+                       商品信息
+                    </div>
+                    <table class=layui-table id=distributive-buyer-items-table>
+                    </table>
+                    <div class=layui-form-item>
+                        买手信息
+                    </div>
+
+                    <table class=layui-table id=distributive-buyer-table lay-filter=distributive-buyer>
+                    </table>
+
+        </div>
+        </div>
+
+        <div class="purchasing-agent-management-clone layui-hide">
+                    <div id=purchasing-agent-management class="padding15 content-tag layui-anim layui-anim-upbit clone">
+                        <h2-title title=代购管理></h2-title>
+                        <div class=layui-form lay-filter=purchasing-agent-management-form>
+                        <div class=layui-form-item>
+                            <div class=layui-inline>
+                                <label class=layui-form-label>姓名</label>
+                                <div class=layui-input-inline>
+                                    <input type=text name=name autocomplete=off class=layui-input>
+                                </div>
+                            </div>
+                            <div class=layui-inline>
+                                <label class=layui-form-label>手机</label>
+                                <div class=layui-input-inline>
+                                    <input type=text name=phone autocomplete=off class=layui-input>
+                                </div>
+                            </div>
+                            <div class=layui-inline>
+                                <label class=layui-form-label>状态</label>
+                                <div class=layui-input-inline>
+                                    <div class=at-least-one>
+                                        <input type=checkbox value=1 class=purchasing-agent-statu-btn title=启用 checked="" name=status1 lay-filter=at-least-one>
+                                        <input type=checkbox value=0 class=purchasing-agent-statu-btn title=禁用 checked="" name=status2 lay-filter=at-least-one>
+
+                                    </div>
+                                </div>
+                                <button type=button class=layui-btn lay-submit lay-filter=purchasing-agent-management-form-submit>搜索</button>
+                            </div>
+                        </div>
+
+                        </div>
+                        <div class=layui-collapse lay-filter=test>
+                            <div class=layui-colla-item>
+                                <h2 class=layui-colla-title>代购列表</h2>
+                                <div class="layui-colla-content layui-show">
+                                    <table class=purchasing-agent-management-table lay-filter=purchasing-agent-management-table></table>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+        <div class="purchasing-agent-management-address-clone layui-hide">
+
+                    <div id=purchasing-agent-management-address class="padding15 content-tag layui-anim layui-anim-upbit clone">
+                        <h2-title title=用户信息管理></h2-title>
+                        <div class="layui-tab layui-tab-card">
+                            <ul class=layui-tab-title>
+                                <li class=layui-this>基本信息</li>
+                                <li v-for="(d,i) in addressList" v-text="'地址'+(i==0?'(默认)':(i+1))"></li>
+
+                            </ul>
+                            <div class=layui-tab-content>
+                                <div class="layui-tab-item layui-show">
+                                    <div class=layui-form lay-filter=purchasing-agent-management-form>
+                                        <div class=layui-form-item>
+                                            <label class=layui-form-label>账号</label>
+                                            <div class=layui-input-block>
+                                                <input class="layui-input layui-disabled" :value=info.username name=username readonly=readonly>
+                                                <input hidden :value=info.id name=id>
+                                            </div>
+                                        </div>
+                                        <div class=layui-form-item>
+                                            <label class=layui-form-label>姓名</label>
+                                            <div class=layui-input-block>
+                                                <input class=layui-input placeholder=请输入姓名 :value=info.nickname name=nickname>
+                                            </div>
+                                        </div>
+                                        <div class=layui-form-item>
+                                            <label class=layui-form-label>Emali</label>
+                                            <div class=layui-input-block>
+                                                <input class=layui-input placeholder=请输入Emali :value=info.email name=email>
+                                            </div>
+                                        </div>
+
+                                        <div class=layui-form-item>
+                                            <label class=layui-form-label>身份证号码</label>
+                                            <div class=layui-input-block>
+                                                <input class=layui-input placeholder=请输入身份证号码 :value=info.idCard name=idCard>
+                                            </div>
+                                        </div>
+
+                                        <div class=layui-form-item>
+                                            <label class=layui-form-label>身份证照片</label>
+                                            <div class=layui-input-inline>
+                                                <div class=layui-upload>
+                                                    <button type=button class=layui-btn id=positive-photo>正面照片</button>
+                                                    <div class=layui-upload-list>
+                                                        <img class="layui-upload-img positive-photo-img" id=positive-photo-img>
+                                                        <p class=positive-photo-text></p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class=layui-input-inline style="margin-left: 50px">
+                                                <div class=layui-upload>
+                                                    <button type=button class=layui-btn id=reverse-photo>反面照片</button>
+                                                    <div class=layui-upload-list>
+                                                        <img class="layui-upload-img reverse-photo-img" id=reverse-photo-img>
+                                                        <p class=reverse-photo-text></p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class=layui-form-item>
+                                            <label class=layui-form-label></label>
+                                            <div class=layui-input-inline>
+                                              <button class="layui-btn-fluid layui-btn" lay-submit lay-filter=purchasing-agent-management-form-submit>保存</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class=layui-tab-item v-for="(d,i) in addressList">
+                                    <div class=layui-form lay-filter=purchasing-agent-management-add-form>
+                                        <div class=layui-form-item>
+                                            <label class=layui-form-label>收件人</label>
+                                            <div class=layui-input-block>
+                                                <input class=layui-input placeholder=请输入姓名 :value=d.receiverName name=receiverName>
+                                                <input hidden :value=d.userId>
+                                                <input hidden :value=d.id name=id>
+                                            </div>
+                                        </div>
+                                        <div class=layui-form-item>
+                                            <label class=layui-form-label>收件人手机</label>
+                                            <div class=layui-input-block>
+                                                 <input class=layui-input placeholder=请输入手机号码 :value=d.receiverPhone name=receiverPhone>
+                                            </div>
+                                        </div>
+                                        <div class="layui-form-item province-city-area">
+                                            <label class=layui-form-label>省市区选择</label>
+                                            <div class=layui-input-inline>
+                                                <select name=province lay-filter=province-city-area>
+                                                    <option v-for="province in d.provinceList" v-text=province.name :code=province.code :value=province.name v-if="province.selected==1" selected=selected></option>
+                                                    <option v-text=province.name :code=province.code v-else :value=province.name></option>
+                                                </select>
+                                            </div>
+                                            <div class=layui-input-inline>
+                                                <select name=city lay-filter=province-city-area>
+                                                 <option v-for="city in d.cityList" v-text=city.name :code=city.code v-if="city.selected==1" selected=selected :value=city.name></option>
+                                                 <option v-text=city.name :code=city.code v-else :value=city.name></option>
+                                                </select>
+                                            </div>
+                                            <div class=layui-input-inline>
+                                                <select name=area lay-filter=province-city-area>
+                                                    <option v-for="area in d.areaList" v-text=area.name :code=area.code v-if="area.selected==1" selected=selected :value=area.name></option>
+                                                    <option v-text=area.name :code=area.code v-else :value=area.name></option>
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <div class=layui-form-item>
+                                            <label class=layui-form-label>详细地址</label>
+                                            <div class=layui-input-block>
+                                                <input class=layui-input placeholder=请输入详细地址 :value=d.address name=address>
+                                            </div>
+                                        </div>
+
+                                        <div class=layui-form-item>
+                                            <label class=layui-form-label>邮编</label>
+                                            <div class=layui-input-block>
+                                                <input class=layui-input placeholder=请输入邮编号码 :value=d.code name=code>
+                                            </div>
+                                        </div>
+
+
+
+
+
+
+                                        <div class=layui-form-item>
+                                            <label class=layui-form-label></label>
+                                            <div class=layui-input-inline>
+                                                <button class="layui-btn layui-btn-fluid" lay-submit lay-filter=purchasing-agent-management-add-form-submit>保存</button>
+                                            </div>
+                                        </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+
+        <div class="index-banner-management-clone layui-hide">
+            <div id=index-banner-management class="padding15 content-tag layui-anim layui-anim-upbit clone">
+                <h2-title title=banner列表></h2-title>
+                <button class="layui-btn site-active add-banner-btn" data-clone=index-banner-edit-clone bar-type=index-banner-edit lay-event=detail>新增</button>
+                <table class=index-banner-management-table lay-filter=index-banner-management-table></table>
+            </div>
+        </div>
+
+        <div class="index-banner-edit-clone layui-hide">
+            <div id=index-banner-edit class="padding15 content-tag layui-anim layui-anim-upbit clone">
+                <h2-title title=banner编辑></h2-title>
+                <form class=layui-form>
+                    <div class=layui-form-item>
+                        <label class=layui-form-label>banner标题</label>
+                        <div class=layui-input-block>
+                            <input class=layui-input name=title placeholder=请输入banner标题 :value=data.title>
+                            <input hidden name=id :value=data.id>
+                        </div>
+                    </div>
+                    <div class=layui-form-item>
+                        <label class=layui-form-label>banner图片</label>
+                        <div class=layui-input-inline>
+                            <div class=layui-upload>
+                                <button type=button class=layui-btn name=img id=index-banner-photo>banner图片</button>
+                                <div class=layui-upload-list>
+                                    <img class="layui-upload-img index-banner-photo-img" id=index-banner-photo-img :src=data.img>
+                                    <p class=index-banner-photo-text></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class=layui-form-item>
+                        <label class=layui-form-label>banner链接</label>
+                        <div class=layui-input-block>
+                            <input class=layui-input name=url placeholder=请输入链接 :value=data.url>
+                        </div>
+                    </div>
+                    <div class=layui-form-item>
+                        <label class=layui-form-label>排序</label>
+                        <div class=layui-input-block>
+                            <input class=layui-input name=priority lay-verify=int placeholder=请输入排序 :value=data.priority>
+                        </div>
+                    </div>
+                    <div class=layui-form-item>
+                        <label class=layui-form-label>状态</label>
+                        <div class=layui-input-block v-if="data.status == 1">
+                            <input class=layui-input type=checkbox name=status value=1 lay-skin=switch lay-text=启用|禁用 checked=checked>
+                        </div>
+                        <div class=layui-input-block v-else>
+                            <input class=layui-input type=checkbox name=status value=1 lay-skin=switch lay-text=启用|禁用>
+                        </div>
+                    </div>
+                    <div class=layui-form-item>
+                        <label class=layui-form-label></label>
+                        <div class=layui-input-inline>
+                            <button class="layui-btn layui-btn-fluid" lay-submit lay-filter=index-banner-edit-form-submit type=reset>保存</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="admin-management-clone layui-hide">
+            <div id=admin-management class="padding15 content-tag layui-anim layui-anim-upbit clone">
+                <h2-title title=管理员列表></h2-title>
+                <button class="layui-btn site-active add-admin-btn" data-clone=admin-edit-clone bar-type=admin-edit lay-event=detail>新增</button>
+                <table class=admin-management-table lay-filter=admin-management-table></table>
+            </div>
+        </div>
+
+        <div class="admin-edit-clone layui-hide">
+            <div id=admin-edit class="padding15 content-tag layui-anim layui-anim-upbit clone">
+                <h2-title title=管理员编辑></h2-title>
+                <div class="layui-form admin-edit-form" lay-filter=admin-edit-form>
+                    <div class=layui-form-item>
+                        <label class=layui-form-label>管理员姓名</label>
+                        <div class=layui-input-block>
+                            <input class=layui-input placeholder=请输入管理员姓名 :value=data.nickname name=nickname>
+                            <input name=id hidden :value=data.id>
+                        </div>
+                    </div>
+                    <div class=layui-form-item>
+                        <label class=layui-form-label>手机号码</label>
+                        <div class=layui-input-block>
+                            <input class=layui-input placeholder=请输入链接 lay-verify=must must=请输入手机号 :value=data.phone name=phone>
+                        </div>
+                    </div>
+                    <div class=layui-form-item>
+                        <label class=layui-form-label>登陆账号</label>
+                        <div class=layui-input-block>
+                            <input class=layui-input placeholder=请输入登陆账号 lay-verify=must must=账号不能为空 :value=data.username name=username>
+                        </div>
+                    </div>
+                    <div v-if="actType=='add'">
+                        <div class=layui-form-item>
+                            <label class=layui-form-label>登陆密码</label>
+                            <div class=layui-input-block>
+                                <input class=layui-input placeholder=请输入登陆密码 lay-verify=must name=password must=密码不能为空>
+                            </div>
+                        </div>
+                        <div class=layui-form-item>
+                            <label class=layui-form-label>再次输入密码</label>
+                            <div class=layui-input-block>
+                                <input class=layui-input placeholder=请再次输入登陆密码 lay-verify=must must=请再次输入密码 name=password>
+                            </div>
+                        </div>
+                    </div>
+                    <div v-else>
+                        <div class=layui-form-item>
+                            <label class=layui-form-label>登陆密码</label>
+                            <div class=layui-input-block>
+                                <input class=layui-input placeholder=请输入登陆密码>
+                            </div>
+                        </div>
+                        <div class=layui-form-item>
+                            <label class=layui-form-label>新密码</label>
+                            <div class=layui-input-block>
+                                <input class=layui-input placeholder=请输入新密码 name=newPassword>
+                            </div>
+                        </div>
+                    </div>
+                    <div class=layui-form-item>
+                        <label class=layui-form-label>角色</label>
+                        <div class=layui-input-inline>
+                            <select name=purchaseType lay-filter=role>
+                                <option value=3 v-if="type==4">运营</option>
+                                <option value=2 admin_edit>买手</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class=layui-form-item>
+                        <label class=layui-form-label>状态</label>
+                        <div class=layui-input-block v-if="data.status==1">
+                            <input class=layui-input type=checkbox lay-skin=switch lay-text=启用|禁用 name=status checked=checked value=1>
+                        </div>
+                        <div class=layui-input-block v-else>
+                            <input class=layui-input type=checkbox lay-skin=switch lay-text=启用|禁用 name=status value=1>
+                        </div>
+                    </div>
+                    <div class=layui-form-item>
+                        <label class=layui-form-label></label>
+                        <div class=layui-input-inline>
+                            <button class="layui-btn layui-btn-fluid" type=reset lay-submit lay-filter=admin-edit-form-submit>保存</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="Excel-export-clone layui-hide">
+            <div id=Excel-export class="padding15 content-tag layui-anim layui-anim-upbit clone">
+                <h2-title title=Excel-导入></h2-title>
+                <form class=layui-form lay-filter=excel-form>
+                    <div class=layui-form-item> <label class=layui-form-label>选择文件</label>  <input style="margin-top: 5px" type=file name=excelFile lay-verify=must must=请选择文件></div>
+                    <div class=layui-form-item>
+                        <label class=layui-form-label></label>
+                        <input type=radio name=type value=uploadExcel_process title=一件代发导入sku>
+                        <a href=http://upload.hljr.com.cn/%E6%96%B0%E5%A2%9ESKU%E6%A8%A1%E6%9D%BF.xls class=layui-btn>下载模板</a>
+
+                    </div>
+                    <div class=layui-form-item>
+                        <label class=layui-form-label></label>
+                        <input type=radio name=type value=uploadExcel_updateStock title=一件代发更新库存>
+                        <a href=http://upload.hljr.com.cn/%E5%BA%93%E5%AD%98%E6%A8%A1%E6%9D%BF.xls class=layui-btn>下载模板</a>
+                    </div>
+                    <div class=layui-form-item>
+                    <div class=layui-input-block>
+                        <button class=layui-btn type=button lay-submit lay-filter=excel-form-submit>提交</button>
+                    </div>
+                    </div>
+                    <table class=layui-table>
+                        <tr v-for="(err,i) in errors">
+                            <td>${{i+1}}:第${{err}}行数据插入失败</td>
+                        </tr>
+                    </table>
+                </form>
+
+            </div>
+        </div>
+
+
+        <div class="fullAll layui-hide">
+            <div class=layui-form>
+                <div class=layui-form-item>
+                    <div class=layui-form-item><label class=layui-form-label>销售价</label><div class=layui-input-inline><input class=layui-input name=price></div></div>
+                    <div class=layui-form-item><label class=layui-form-label>成本价</label><div class=layui-input-inline><input class=layui-input name=costPrice></div></div>
+                    <div class=layui-form-item><label class=layui-form-label>免税价</label><div class=layui-input-inline><input class=layui-input name=dutyFreePrice></div></div>
+                    <div class=layui-form-item><label class=layui-form-label>库存</label><div class=layui-input-inline><input class=layui-input name=stock></div></div>
+                    <div class=layui-form-item><label class=layui-form-label>最少购买</label><div class=layui-input-inline><input class=layui-input name=minPurchaseNum></div></div>
+                    <div class=layui-form-item><label class=layui-form-label>限制条件</label><div class=layui-input-inline><input class="layui-input limit" readonly=readonly name=limitTimelimitNum> <input hidden name=limitTime><input hidden name=limitNum></div></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class=layui-footer>
+
+        ©时差买手
+    </div>
+</div>
+
+<script type=text/html id=order-list_bar>
+    <a class="layui-btn layui-btn-xs site-active" data-type="tabAdd" data-clone="stock-order-edit-clone" bar-type="stock-order-edit" lay-event="edit" btn-type="edit">查看/编辑</a>
+    <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">删除</a>
+</script>
+
+
+<script type=text/html id=brand-list-bar>
+    <a class="layui-btn layui-btn-xs classification-of-goods-edit-click site-active-edit" data-type="tabAdd" data-clone="brand-management-div-clone" lay-event="edit"  bar-type="brand-management" btn-type="edit">编辑</a>
+</script>
+<script type=text/html id=brand-list-check>
+    <input type="checkbox"  value="{{d.id}}" lay-skin="switch" lay-text="启用|禁用" {{ d.status == '1' ? 'checked' : '' }} lay-filter="brand-list-check">
+</script>
+
+
+<script type=text/html id=classification_of_goods_bar>
+    <a class="layui-btn layui-btn-xs classification-of-goods-edit-click site-active-edit" data-clone="classification-of-goods-edit-div-clone" lay-event="edit"  bar-type="classification_of_goods_edit" btn-type="edit">编辑</a>
+</script>
+<script type=text/html id=classification_of_goods_check>
+    <input type="checkbox"  value="{{d.id}}" lay-skin="switch" lay-text="启用|禁用" {{ d.status == '1' ? 'checked' : '' }} lay-filter="classification_of_goods_check">
+</script>
+
+<script type=text/html id=classification-of-goods-bk-bar>
+    <a class="layui-btn layui-btn-xs classification-of-goods-edit-click site-active-edit" data-clone="classification-of-goods-bk-edit-div-clone" lay-event="edit"  bar-type="classification-of-goods-bk-edit" btn-type="edit">编辑</a>
+</script>
+<script type=text/html id=classification-of-goods-bk-check>
+    <input type="checkbox"  value="{{d.id}}" lay-skin="switch" lay-text="启用|禁用" {{ d.status == '1' ? 'checked' : '' }} lay-filter="classification-of-goods-bk-check">
+</script>
+
+<script type=text/html id=goods-management-list-table-bar>
+    <a class="layui-btn  layui-btn-xs" lay-event="detail" btn-type="edit">编辑</a>
+</script>
+<script type=text/html id=goods-management-list-check>
+    <input type="checkbox"  lay-skin="switch" value="{{d.id}}" lay-text="上架|下架" lay-filter="goods-management-list-check"{{ d.status == '1' ? 'checked' : '' }}>
+</script>
+<script type=text/html id=goods-management-list-img>
+    <img src="{{d.goodIcon}}">
+</script>
+
+<script type=text/html id=goods-management-list-table-bar-bk>
+    <a class="layui-btn  layui-btn-xs" lay-event="detail" btn-type="edit">编辑</a>
+</script>
+<script type=text/html id=goods-management-list-check-bk>
+    <input type="checkbox"  lay-skin="switch" value="{{d.id}}" lay-text="上架|下架" lay-filter="goods-management-list-check-bk"{{ d.status == '1' ? 'checked' : '' }}>
+</script>
+<script type=text/html id=goods-management-list-img-bk>
+    <img src="{{d.goodIcon}}">
+</script>
+
+<script id=stock-order-list-table-items type=text/html>
+    {{#  layui.each(d.items, function(index, item){ }}
+      <div lay-event="order-detail"> {{item.brandName}}{{item.productName}}{{item.attr}} &nbsp; &nbsp; x{{item.num}}<br></div>
+    {{#  }); }}
+    {{#  if(d.items.length === 0){ }}
+    无数据
+    {{#  } }}
+</script>
+<script type=text/html id=stock-order-list-table-bar1>
+    <a class="layui-btn layui-btn-xs classification-of-goods-edit-click site-active-edit"  data-clone="stock-order-edit-clone" bar-type="stock-order-edit" lay-event="edit" btn-type="edit">查看/编辑</a>
+
+    {{# if(d.orderStatus == '待支付'){ }}
+    <a class="layui-btn layui-btn-xs classification-of-goods-edit-click waybill-number-btn"  lay-event="cancel">取消</a>
+    {{# } }}
+</script>
+<script type=text/html id=order-detail-table-bar>
+    <a class="layui-btn layui-btn-xs classification-of-goods-edit-click waybill-number-btn"  lay-event="waybill-number">退款</a>
+</script>
+
+
+<script id=stock-order-list-table-items-bk type=text/html>
+    {{#  layui.each(d.items, function(index, item){ }}
+    <div lay-event="order-detail">{{item.brandName}} {{item.productName}}{{item.attr}} &nbsp; &nbsp; x{{item.num}}<br></div>
+    {{#  }); }}
+    {{#  if(d.items.length === 0){ }}
+    无数据
+    {{#  } }}
+</script>
+<script type=text/html id=stock-order-list-table-bar1-bk>
+    {{# if(d.orderStatus == '待发货'||d.orderStatus == '已发货'||d.orderStatus == '已完成'){ }}
+    <a class="layui-btn layui-btn-xs"  lay-event="waybill-number">运单号</a>
+    {{# } }}
+
+    <a class="layui-btn layui-btn-xs site-active-edit"  data-clone="stock-order-edit-clone-bk" bar-type="stock-order-edit-bk" lay-event="edit" btn-type="edit">查看/编辑</a>
+
+    {{# if(d.orderStatus == '待支付'){ }}
+    <a class="layui-btn layui-btn-xs"  lay-event="cancel">取消</a>
+    {{# } }}
+    {{# if(d.orderStatus == '待接单'){ }}
+    <a class="layui-btn layui-btn-xs"  lay-event="takingOrder">接单</a>
+    {{# } }}
+    {{# if(d.orderStatus == '已接单'){ }}
+    <a class="layui-btn layui-btn-xs"  lay-event="replaceOrder">代下单</a>
+    {{# } }}
+    {{# if(d.orderStatus == '待确认'){ }}
+    <a class="layui-btn layui-btn-xs"  lay-event="confirm">确认</a>
+    {{# } }}
+    {{# if(d.orderStatus == '全部驳回'){ }}
+    <a class="layui-btn layui-btn-xs"  lay-event="nogoods">无货</a>
+    {{# } }}
+    {{# if(d.orderStatus == '抢购中'||d.orderStatus == '已接单'||d.orderStatus == '待购买'||d.orderStatus == '待确认'||d.orderStatus == '无货'||d.orderStatus == '全部驳回'){ }}
+    <a class="layui-btn layui-btn-xs site-active-edit" data-clone="distributive-buyer-clone" bar-type="distributive-buyer"  lay-event="distributive-buyer">分配买手</a>
+    {{# } }}
+</script>
+
+<script id=commodity-return-list-table-items type=text/html>
+    {{#  layui.each(d.items, function(index, item){ }}
+    <div lay-event="order-detail"> {{item.brandName}}{{item.productName}}{{item.attr}} &nbsp; &nbsp; x{{item.num}}<br></div>
+    {{#  }); }}
+    {{#  if(d.items.length === 0){ }}
+    无数据
+    {{#  } }}
+</script>
+<script type=text/html id=commodity-return-list-table-bar1>
+  <a class="layui-btn layui-btn-xs  site-active-edit"  data-clone="commodity-return-edit-clone" bar-type="commodity-return-edit" lay-event="edit" btn-type="edit">查看/编辑</a>
+</script>
+
+<script type=text/html id=distributive-buyer-bar>
+    {{# if(d.status != '抢购中'){ }}
+  <a class="layui-btn layui-btn-xs" lay-event="fenpei">分配买手</a>
+    {{# } }}
+</script>
+
+
+<script type=text/html id=purchasing-agent-management-table-bar>
+    <a class="layui-btn  layui-btn-xs site-active-edit"  data-clone="purchasing-agent-management-address-clone"  bar-type="purchasing-agent-management-address" lay-event="detail"  btn-type="edit">编辑</a>
+</script>
+<script type=text/html id=purchasing-agent-management-table-check>
+    <input type="checkbox" name="status" value="{{d.id}}" lay-filter="purchasing-agent-management-table-check" lay-skin="switch" lay-text="启用|禁用" {{ d.status == '1' ? 'checked' : '' }}>
+</script>
+
+
+<script type=text/html id=admin-management-table-bar>
+    <a class="layui-btn  layui-btn-xs site-active-edit" data-clone="admin-edit-clone"  bar-type="admin-edit" lay-event="detail" btn-type="edit">编辑</a>
+</script>
+<script type=text/html id=admin-management-table-check>
+    <input type="checkbox" name="status" value="{{d.id}}" lay-skin="switch" lay-text="启用|禁用" lay-filter="admin-management-table-check"{{ d.status == '1' ? 'checked' : '' }}>
+</script>
+<script type=text/html id=admin-management-table-type>
+    {{# if(d.type==2){ }}
+    买手
+    {{# }else if(d.type==3){ }}
+    运营
+    {{# }else if(d.type==4){ }}
+    admin
+    {{# }else{ }}
+    其他
+    {{# } }}
+</script>
+
+<script type=text/html id=index-banner-management-table-bar>
+    <a class="layui-btn  layui-btn-xs site-active-edit" data-clone="index-banner-edit-clone"  bar-type="index-banner-edit" lay-event="detail" btn-type="edit" >编辑</a>
+</script>
+<script type=text/html id=index-banner-management-table-check>
+
+    <input type="checkbox" name="sex" value="{{d.id}}" lay-skin="switch" lay-text="启用|禁用" lay-filter="index-banner-management-table-check" {{ d.status == '1' ? 'checked' : '' }}>
+</script>
+<script type=text/html id=index-banner-management-table-img>
+    <img class="table-img" src='{{d.img}}'>
+</script>
+
+
+<script type=text/x-template id=loginAndeRegister>
+    <form class="layui-form" method="post">
+        <div class="layui-form-item">
+            <label  class="layui-form-label label-w120">登录名</label>
+            <div class="layui-input-inline"><input type="text" id="telephone" name="username" lay-filter="telephone" lay-verify="telephone"  placeholder="请输入手机号码"  class="layui-input" info="登录名不能为空"></div>
+
+            <div class="layui-word-aux"  v-if="loginOrRegist == 'regist'||loginOrRegist == 'forget'"><button class="layui-btn layui-btn-normal get-code" type="button" >获取验证码</button></div>
+        </div>
+        <div class="layui-form-item" v-if="loginOrRegist == 'regist'||loginOrRegist == 'forget'">
+            <label  class="layui-form-label label-w120">短信验证码</label>  <div class="layui-input-inline" ><input type="text" name="SMSAuthenticationCode" placeholder="请输入短信验证码" info="短信验证码不能为空" lay-verify="code" class="layui-input"></div>
+        </div>
+        <div class="layui-form-item">
+            <label  class="layui-form-label label-w120"><span v-if="loginOrRegist == 'forget'">新</span>密码</label>  <div class="layui-input-inline"><input type="password" name="password"   autocomplete="off" placeholder="请输入密码"  lay-verify="telephone" class="layui-input"  info="密码不能为空"></div>
+        </div>
+        <!--<div class="layui-form-item"  v-if="loginOrRegist == 'login'">-->
+            <!--<label  class="layui-form-label label-w120"></label>  <div class="layui-input-inline"><a href="javascript:void(0)">忘记密码?</a></div>-->
+        <!--</div>-->
+        <div class="layui-form-item"  v-if="loginOrRegist == 'regist'||loginOrRegist == 'forget'">
+            <label  class="layui-form-label label-w120">重复输入密码</label>  <div class="layui-input-inline"><input type="password" name="password"   placeholder="请重复输入密码"   info="密码不能为空" class="layui-input"></div>
+        </div>
+        <div class="layui-form-item"  v-if="loginOrRegist == 'regist'">
+            <label  class="layui-form-label label-w120">推荐码</label>  <div class="layui-input-inline"><input type="text" name="recommendationCode"  placeholder="可选，非必填"  info="推荐码不能为空" class="layui-input"></div>
+        </div>
+        <!--<div class="layui-form-item"  v-if="loginOrRegist == 'login'">-->
+            <!--<label  class="layui-form-label label-w120">验证码</label>  <div class="layui-input-inline"><input type="text" name="verificationCode"  placeholder="请输入验证码"  info="验证码不能为空" class="layui-input"></div></div>-->
+        <!--</div>-->
+        <!--<div class="layui-form-item"  v-if="loginOrRegist == 'login'"> <label  class="layui-form-label label-w120"></label> <img style="width: 120px;height: 38px" :src="codeurl"><a href="javascript:void(0)" class="layui-word-aux refresh">刷新</a></div>-->
+
+        <!--<div class="layui-form-item"  v-if="loginOrRegist == 'login'">-->
+            <!--<label class="layui-form-label label-w120"></label>-->
+            <!--<div class="layui-input-block">-->
+                <!--<input type="checkbox" name="keepLogin" title="记录账号密码" lay-skin="primary" value="true">-->
+            <!--</div>-->
+        <!--</div>-->
+
+        <div class="layui-form-item">
+
+            <label  class="layui-form-label label-w120"></label>
+            <button class="layui-btn layui-btn-normal layui-input-inline" lay-submit type="button" lay-filter="login">立即<span v-if="loginOrRegist == 'login'">登录</span><span v-if="loginOrRegist == 'regist'">注册</span><span v-if="loginOrRegist == 'forget'">修改</span></button>
+
+        </div>
+
+    </form>
+</script>
+<script>
+
+</script>
+
+<script type=text/javascript src=http://admin.shichamaishou.com/assets/js/manifest.js?b1ba9203d4ea086dfa19></script><script type=text/javascript src=http://admin.shichamaishou.com/assets/js/vendor.js?b1ba9203d4ea086dfa19></script><script type=text/javascript src=http://admin.shichamaishou.com/assets/js/golbal.js?b1ba9203d4ea086dfa19></script><script type=text/javascript src=http://admin.shichamaishou.com/assets/js/entry.js?b1ba9203d4ea086dfa19></script></body>
+</html>

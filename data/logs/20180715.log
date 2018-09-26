@@ -1,0 +1,56 @@
+加密值:-返回值:{"message":"\u5931\u8d25","code":400,"data":""}-2018-07-15 00:39:42
+
+加密值:-返回值:{"message":"\u5931\u8d25","code":400,"data":""}-2018-07-15 02:18:20
+
+加密值:-返回值:{"message":"\u5931\u8d25","code":400,"data":""}-2018-07-15 02:22:29
+
+加密值:-返回值:{"message":"\u5931\u8d25","code":400,"data":""}-2018-07-15 02:41:25
+
+加密值:-返回值:{"message":"\u5931\u8d25","code":400,"data":""}-2018-07-15 02:56:43
+
+加密值:-返回值:{"message":"\u5931\u8d25","code":400,"data":""}-2018-07-15 03:30:19
+
+加密值:-返回值:{"message":"\u5931\u8d25","code":400,"data":""}-2018-07-15 05:35:18
+
+加密值:-返回值:{"message":"\u5931\u8d25","code":400,"data":""}-2018-07-15 11:08:53
+
+加密值:-返回值:{"message":"\u5931\u8d25","code":400,"data":""}-2018-07-15 12:18:45
+
+加密值:-返回值:{"message":"\u5931\u8d25","code":400,"data":""}-2018-07-15 15:12:50
+
+加密值:-返回值:{"message":"\u5931\u8d25","code":400,"data":""}-2018-07-15 16:32:30
+
+加密值:-返回值:{"message":"\u5931\u8d25","code":400,"data":""}-2018-07-15 17:08:03
+
+加密值:-返回值:{"message":"\u5931\u8d25","code":400,"data":""}-2018-07-15 18:18:59
+
+加密值:{"act":"reSpecialProduct_getList","offset":0,"max":10,"userid":0}返回值:{"message":"\u6210\u529f","code":200,"datalist":[{"id":283,"pid":283,"skuId":592,"name":"REFA \u7ecf\u5178\u4e24\u8f6e$236","goodIcon":"http:\/\/upload.hljr.com.cn\/2063907210_img.jpg","price":1225,"original_Price":1400,"model":"\u578b\u53f7","attr":"\u9ed8\u8ba4\u578b\u53f7","stock":17},{"id":274,"pid":274,"skuId":574,"name":"NARS \u816e\u7ea2","goodIcon":"http:\/\/upload.hljr.com.cn\/4016_img.jpg","price":155,"original_Price":170,"model":"\u578b\u53f7","attr":"#DEEP THROAT","stock":20},{"id":147,"pid":147,"skuId":261,"name":"\u963f\u739b\u5c3c \u7ea2\u7ba1\u4e1d\u7ed2\u5507\u91c9","goodIcon":"http:\/\/upload.hljr.com.cn\/L3680600_img.jpg","price":195,"original_Price":215,"model":"\u8272\u53f7","attr":"#500","stock":20},{"id":201,"pid":201,"skuId":427,"name":"\u79d1\u989c\u6c0f \u725b\u6cb9\u679c\u773c\u971c","goodIcon":"http:\/\/upload.hljr.com.cn\/S0602800_img.jpg","price":275,"original_Price":300,"model":"\u5bb9\u91cf","attr":"28g","stock":18}]}-2018-07-15 18:25:07
+
+加密值:{"act":"banner_getList","userid":0}返回值:{"message":"\u6210\u529f","code":200,"datalist":[{"id":7,"title":"\u5927\u82cf\u5dde","img":"http:\/\/upload.hljr.com.cn\/e2728d0d-4b61-454b-8fd2-7cd3badb6518?imageMogr2\/auto-orient\/thumbnail\/750x320!","url":"http:\/\/info.shichamaishou.com"},{"id":2,"title":"\u8f6e\u64ad1","img":"http:\/\/upload.hljr.com.cn\/aa85d107-1ae2-49e7-8d00-f5138ce253c7?imageMogr2\/auto-orient\/thumbnail\/750x320!","url":"http:\/\/info.shichamaishou.com"},{"id":5,"title":"\u8f6e\u64ad1","img":"http:\/\/upload.hljr.com.cn\/d5f193eb-ee12-4bbc-801e-4c49784ab0a0?imageMogr2\/auto-orient\/thumbnail\/750x320!","url":"http:\/\/info.shichamaishou.com"}]}-2018-07-15 18:25:07
+
+加密值:{"act":"customer_login","username":"18550084825","password":"333","userid":0}返回值:{"message":"\u6210\u529f","code":200,"data":{"id":7,"nickname":"\u5185\u90e8\u6d4b\u8bd5\u8bf7\u52ff\u53d1\u8d27","img":"http:\/\/upload.hljr.com.cn\/?imageMogr2\/auto-orient\/thumbnail\/100x100!","email":"525252525@qq.com","days":4105,"token":"bb38542adb5f14d6f07ce4db7eec9684"}}-2018-07-15 18:30:53
+
+加密值:{"act":"customer_login","username":"18550084825","password":"333","userid":0}返回值:{"message":"\u6210\u529f","code":200,"data":{"id":7,"nickname":"\u5185\u90e8\u6d4b\u8bd5\u8bf7\u52ff\u53d1\u8d27","img":"http:\/\/upload.hljr.com.cn\/?imageMogr2\/auto-orient\/thumbnail\/100x100!","email":"525252525@qq.com","days":4105,"token":"bb38542adb5f14d6f07ce4db7eec9684"}}-2018-07-15 18:30:53
+
+加密值:{"act":"cart_getList","userid":7,"type":1,"token":"bb38542adb5f14d6f07ce4db7eec9684"}返回值:{"message":"\u6210\u529f","code":200,"data":{"list":[{"name":"\u816e\u7ea2","price":155,"model":"\u578b\u53f7","attr":"#DEEP THROAT","id":331,"pid":274,"skuId":574,"pType":2,"num":1}],"total":155,"num":1}}-2018-07-15 18:30:53
+
+加密值:{"act":"cart_getList","userid":7,"type":1,"token":"bb38542adb5f14d6f07ce4db7eec9684"}返回值:{"message":"\u6210\u529f","code":200,"data":{"list":[{"name":"\u816e\u7ea2","price":155,"model":"\u578b\u53f7","attr":"#DEEP THROAT","id":331,"pid":274,"skuId":574,"pType":2,"num":1}],"total":155,"num":1}}-2018-07-15 18:30:54
+
+加密值:{"act":"reProduct_getSkuListById","id":274,"userid":0}返回值:{"message":"\u6210\u529f","code":200,"data":{"id":274,"name":"\u816e\u7ea2","model":"\u578b\u53f7","list":[{"skuId":580,"pid":274,"model":"\u578b\u53f7","attr":"#AMOUR","img":"http:\/\/upload.hljr.com.cn\/604b3b3a-8470-4861-895b-73457d17b576?imageMogr2\/auto-orient\/thumbnail\/x400","detailImg":null,"stock":20,"price":165,"dutyFreePrice":186,"isSpecial":0,"limitTime":1,"limitNum":5,"region":"\u9999\u6e2f"},{"skuId":574,"pid":274,"model":"\u578b\u53f7","attr":"#DEEP THROAT","img":"http:\/\/upload.hljr.com.cn\/4016_img.jpg","detailImg":"http:\/\/upload.hljr.com.cn\/4016_detail_img.jpg","stock":20,"price":155,"dutyFreePrice":170,"isSpecial":1,"limitTime":1,"limitNum":5,"region":"\u9999\u6e2f"},{"skuId":578,"pid":274,"model":"\u578b\u53f7","attr":"#DESIRE","img":"http:\/\/upload.hljr.com.cn\/4001_img.jpg","detailImg":null,"stock":20,"price":165,"dutyFreePrice":186,"isSpecial":0,"limitTime":1,"limitNum":5,"region":"\u9999\u6e2f"},{"skuId":579,"pid":274,"model":"\u578b\u53f7","attr":"#GAIETY","img":"http:\/\/upload.hljr.com.cn\/4034_img.jpg","detailImg":null,"stock":20,"price":165,"dutyFreePrice":186,"isSpecial":0,"limitTime":1,"limitNum":5,"region":"\u9999\u6e2f"},{"skuId":575,"pid":274,"model":"\u578b\u53f7","attr":"#ORGASM","img":"http:\/\/upload.hljr.com.cn\/4013_img.jpg","detailImg":"http:\/\/upload.hljr.com.cn\/4013_detail_img.jpg","stock":19,"price":170,"dutyFreePrice":186,"isSpecial":0,"limitTime":1,"limitNum":5,"region":"\u9999\u6e2f"},{"skuId":576,"pid":274,"model":"\u578b\u53f7","attr":"#SUPER ORGASM","img":"http:\/\/upload.hljr.com.cn\/4030_img.jpg","detailImg":"http:\/\/upload.hljr.com.cn\/4030_detail_img.jpg","stock":20,"price":170,"dutyFreePrice":186,"isSpecial":0,"limitTime":1,"limitNum":5,"region":"\u9999\u6e2f"},{"skuId":577,"pid":274,"model":"\u578b\u53f7","attr":"#TAJ MAHAL","img":"http:\/\/upload.hljr.com.cn\/4020_img.jpg","detailImg":"http:\/\/upload.hljr.com.cn\/4020_detail_img.jpg","stock":20,"price":165,"dutyFreePrice":186,"isSpecial":0,"limitTime":1,"limitNum":5,"region":"\u9999\u6e2f"}]}}-2018-07-15 18:30:56
+
+加密值:{"act":"cart_add","skuId":574,"pid":274,"pType":2,"operation":1,"userid":7,"type":1,"token":"bb38542adb5f14d6f07ce4db7eec9684"}返回值:{"message":"\u6210\u529f","code":200,"data":[]}-2018-07-15 18:31:04
+
+加密值:{"act":"cart_add","skuId":574,"pid":274,"pType":2,"operation":1,"userid":7,"type":1,"token":"bb38542adb5f14d6f07ce4db7eec9684"}返回值:{"message":"\u6210\u529f","code":200,"data":[]}-2018-07-15 18:31:05
+
+加密值:{"act":"cart_add","skuId":574,"pid":274,"pType":2,"operation":2,"userid":7,"type":1,"token":"bb38542adb5f14d6f07ce4db7eec9684"}返回值:{"message":"\u6210\u529f","code":200,"data":[]}-2018-07-15 18:31:07
+
+加密值:{"act":"cart_add","skuId":574,"pid":274,"pType":2,"operation":2,"userid":7,"type":1,"token":"bb38542adb5f14d6f07ce4db7eec9684"}返回值:{"message":"\u6210\u529f","code":200,"data":[]}-2018-07-15 18:31:08
+
+加密值:{"act":"cart_add","skuId":574,"pid":274,"pType":2,"operation":2,"userid":7,"type":1,"token":"bb38542adb5f14d6f07ce4db7eec9684"}返回值:{"message":"\u6210\u529f","code":200,"data":[]}-2018-07-15 18:31:08
+
+加密值:-返回值:{"message":"\u5931\u8d25","code":400,"data":""}-2018-07-15 20:49:10
+
+加密值:-返回值:{"message":"\u5931\u8d25","code":400,"data":""}-2018-07-15 21:31:26
+
+加密值:-返回值:{"message":"\u5931\u8d25","code":400,"data":""}-2018-07-15 23:12:20
+

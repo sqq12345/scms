@@ -1,0 +1,56 @@
+加密值:{"act":"reSpecialProduct_getList","id":"2","userid":2,"type":1,"token":"bf1c04da06e4271cda8ec64b027c67fe"}返回值:{"message":"\u6210\u529f","code":200,"datalist":[{"id":1,"pid":1,"skuId":5,"name":"\u8fea\u5965 \u70c8\u7130\u84dd\u91d1\u5507\u818f","goodIcon":"http:\/\/upload.hljr.com.cn\/F042783642_img.jpg","price":190,"original_Price":210,"model":"\u8272\u53f7","attr":"#642","stock":20}]}-2018-08-17 09:56:30
+
+加密值:{"act":"reSpecialProduct_getKillList","id":"2","userid":2,"type":1,"token":"bf1c04da06e4271cda8ec64b027c67fe"}返回值:{"message":"\u6210\u529f","code":200,"datalist":[{"id":"1","0":"1","goodsid":"1","1":"1","skuid":"5","2":"5","type":"1","3":"1","price_limit":"190.00","4":"190.00","num":"4","5":"4","starttime":"2018-08-17 12:00:00","6":"2018-08-17 12:00:00","endtime":"2018-08-17 12:05:00","7":"2018-08-17 12:05:00","createtime":"2018-08-17 10:50:01","8":"2018-08-17 10:50:01"}]}-2018-08-17 03:03:33
+
+加密值:-返回值:{"message":"\u5931\u8d25","code":400,"data":""}-2018-08-17 03:03:33
+
+加密值:{"act":"reSpecialProduct_getKillList","id":"2","userid":2,"type":1,"token":"bf1c04da06e4271cda8ec64b027c67fe"}返回值:{"message":"\u6570\u636e\u4e3a\u7a7a","code":229,"data":[]}-2018-08-17 03:03:52
+
+加密值:{"act":"reSpecialProduct_getKillList","id":"2","userid":2,"type":1,"token":"bf1c04da06e4271cda8ec64b027c67fe"}返回值:{"message":"\u6570\u636e\u4e3a\u7a7a","code":229,"data":[]}-2018-08-17 03:04:05
+
+加密值:{"act":"reSpecialProduct_getKillList","id":"2","userid":2,"type":1,"token":"bf1c04da06e4271cda8ec64b027c67fe"}返回值:{"message":"\u6210\u529f","code":200,"datalist":[{"id":"1","0":"1","goodsid":"1","1":"1","skuid":"5","2":"5","type":"1","3":"1","price_limit":"190.00","4":"190.00","num":"4","5":"4","starttime":"2018-08-17 12:00:00","6":"2018-08-17 12:00:00","endtime":"2018-08-17 12:05:00","7":"2018-08-17 12:05:00","createtime":"2018-08-17 10:50:01","8":"2018-08-17 10:50:01"}]}-2018-08-17 03:04:12
+
+加密值:{"act":"reSpecialProduct_getKillList","daydate":"2018-8-18","userid":2,"type":1,"token":"bf1c04da06e4271cda8ec64b027c67fe"}返回值:{"message":"\u6210\u529f","code":200,"datalist":[{"id":"1","0":"1","goodsid":"1","1":"1","skuid":"5","2":"5","type":"1","3":"1","price_limit":"190.00","4":"190.00","num":"4","5":"4","starttime":"2018-08-18 12:00:00","6":"2018-08-18 12:00:00","endtime":"2018-08-18 12:05:00","7":"2018-08-18 12:05:00","createtime":"2018-08-17 10:50:01","8":"2018-08-17 10:50:01"}]}-2018-08-17 03:04:59
+
+加密值:{"act":"reSpecialProduct_getKillList","daydate":"2018-8-18","userid":2,"type":1,"token":"bf1c04da06e4271cda8ec64b027c67fe"}返回值:{"message":"\u6570\u636e\u4e3a\u7a7a","code":229,"data":[]}-2018-08-17 03:15:44
+
+加密值:{"act":"reSpecialProduct_getKillList","daydate":"2018-8-17","userid":2,"type":1,"token":"bf1c04da06e4271cda8ec64b027c67fe"}返回值:{"message":"\u6570\u636e\u4e3a\u7a7a","code":229,"data":[]}-2018-08-17 03:16:03
+
+加密值:{"act":"reSpecialProduct_getKillList","daydate":"2018-8-17","userid":2,"type":1,"token":"bf1c04da06e4271cda8ec64b027c67fe"}返回值:{"message":"\u6570\u636e\u4e3a\u7a7a","code":229,"data":[]}-2018-08-17 03:18:43
+
+加密值:{"act":"reSpecialProduct_getKillList","userid":2,"type":1,"token":"bf1c04da06e4271cda8ec64b027c67fe"}返回值:{"message":"\u6210\u529f","code":200,"datalist":[{"id":"1","0":"1","goodsid":"1","1":"1","skuid":"5","2":"5","type":"1","3":"1","price_limit":"190.00","4":"190.00","num":"4","5":"4","starttime":"2018-08-17 12:00:00","6":"2018-08-17 12:00:00","endtime":"2018-08-17 12:05:00","7":"2018-08-17 12:05:00","createtime":"2018-08-17 10:50:01","8":"2018-08-17 10:50:01","price":"210.00","9":"210.00","attr":"#642","10":"#642","img":"http:\/\/upload.hljr.com.cn\/F042783642_img.jpg","11":"http:\/\/upload.hljr.com.cn\/F042783642_img.jpg","name":"\u70c8\u7130\u84dd\u91d1\u5507\u818f","12":"\u70c8\u7130\u84dd\u91d1\u5507\u818f","goodsname":"\u8fea\u5965","13":"\u8fea\u5965"}]}-2018-08-17 03:19:00
+
+加密值:{"act":"reSpecialProduct_getKillList","daydate":"2018-8-18","userid":2,"type":1,"token":"bf1c04da06e4271cda8ec64b027c67fe"}返回值:{"message":"\u6210\u529f","code":200,"datalist":[{"id":"1","0":"1","goodsid":"1","1":"1","skuid":"5","2":"5","type":"1","3":"1","price_limit":"190.00","4":"190.00","num":"4","5":"4","starttime":"2018-08-18 12:00:00","6":"2018-08-18 12:00:00","endtime":"2018-08-18 12:05:00","7":"2018-08-18 12:05:00","createtime":"2018-08-18 10:50:01","8":"2018-08-18 10:50:01","price":"210.00","9":"210.00","attr":"#642","10":"#642","img":"http:\/\/upload.hljr.com.cn\/F042783642_img.jpg","11":"http:\/\/upload.hljr.com.cn\/F042783642_img.jpg","name":"\u70c8\u7130\u84dd\u91d1\u5507\u818f","12":"\u70c8\u7130\u84dd\u91d1\u5507\u818f","goodsname":"\u8fea\u5965","13":"\u8fea\u5965"}]}-2018-08-17 03:19:51
+
+加密值:{"act":"reSpecialProduct_getKillList","daydate":"2018-8-18","userid":2,"type":1,"token":"bf1c04da06e4271cda8ec64b027c67fe"}返回值:{"message":"\u6210\u529f","code":200,"datalist":[{"id":"1","0":"1","goodsid":"1","1":"1","skuid":"5","2":"5","type":"1","3":"1","price_limit":"190.00","4":"190.00","num":"4","5":"4","starttime":"2018-08-18 12:00:00","6":"2018-08-18 12:00:00","endtime":"2018-08-18 12:05:00","7":"2018-08-18 12:05:00","createtime":"2018-08-18 10:50:01","8":"2018-08-18 10:50:01","price":"210.00","9":"210.00","attr":"#642","10":"#642","img":"http:\/\/upload.hljr.com.cn\/F042783642_img.jpg","11":"http:\/\/upload.hljr.com.cn\/F042783642_img.jpg","name":"\u70c8\u7130\u84dd\u91d1\u5507\u818f","12":"\u70c8\u7130\u84dd\u91d1\u5507\u818f","goodsname":"\u8fea\u5965","13":"\u8fea\u5965"}]}-2018-08-17 03:20:19
+
+加密值:{"act":"bcBanner_getTagList","userid":2,"type":1,"token":"bf1c04da06e4271cda8ec64b027c67fe"}返回值:{"message":"\u6210\u529f","code":200,"datalist":"3"}-2018-08-17 09:12:18
+
+加密值:{"act":"bcBanner_getTagList","userid":2,"type":1,"token":"bf1c04da06e4271cda8ec64b027c67fe"}返回值:{"message":"\u6210\u529f","code":200,"datalist":"4"}-2018-08-17 09:12:43
+
+加密值:{"act":"bcBanner_getTagList","userid":2,"type":1,"token":"bf1c04da06e4271cda8ec64b027c67fe"}返回值:{"message":"\u6210\u529f","code":200,"datalist":"5"}-2018-08-17 09:12:50
+
+加密值:{"act":"bcBanner_getTagList","userid":2,"type":1,"token":"bf1c04da06e4271cda8ec64b027c67fe"}返回值:{"message":"\u6210\u529f","code":200,"datalist":[{"id":"1","0":"1","tag":"\u96c5\u8bd7\u5170\u9edb","1":"\u96c5\u8bd7\u5170\u9edb","sort":"99","2":"99","createtime":"2018-06-13 10:47:19","3":"2018-06-13 10:47:19","status":"1","4":"1"},{"id":"2","0":"2","tag":"\u4f0a\u601d","1":"\u4f0a\u601d","sort":"98","2":"98","createtime":"2018-06-13 10:47:19","3":"2018-06-13 10:47:19","status":"1","4":"1"}]}-2018-08-17 09:13:32
+
+加密值:{"act":"bcBanner_getTagList","userid":2,"type":1,"token":"bf1c04da06e4271cda8ec64b027c67fe"}返回值:{"message":"\u6210\u529f","code":200,"datalist":[{"id":"1","0":"1","tag":"\u96c5\u8bd7\u5170\u9edb","1":"\u96c5\u8bd7\u5170\u9edb","sort":"99","2":"99","createtime":"2018-06-13 10:47:19","3":"2018-06-13 10:47:19","status":"1","4":"1"},{"id":"2","0":"2","tag":"\u4f0a\u601d","1":"\u4f0a\u601d","sort":"98","2":"98","createtime":"2018-06-13 10:47:19","3":"2018-06-13 10:47:19","status":"1","4":"1"}]}-2018-08-17 09:13:49
+
+加密值:{"act":"bcBanner_getTagList","userid":2,"type":1,"token":"bf1c04da06e4271cda8ec64b027c67fe"}返回值:{"message":"\u6210\u529f","code":200,"datalist":[{"id":"2","0":"2","tag":"\u4f0a\u601d","1":"\u4f0a\u601d","sort":"99","2":"99","createtime":"2018-06-13 10:47:19","3":"2018-06-13 10:47:19","status":"1","4":"1"},{"id":"1","0":"1","tag":"\u96c5\u8bd7\u5170\u9edb","1":"\u96c5\u8bd7\u5170\u9edb","sort":"99","2":"99","createtime":"2018-06-13 10:47:19","3":"2018-06-13 10:47:19","status":"1","4":"1"}]}-2018-08-17 09:14:42
+
+加密值:{"act":"bcBanner_getTagList","userid":2,"type":1,"token":"bf1c04da06e4271cda8ec64b027c67fe"}返回值:{"message":"\u6210\u529f","code":200,"datalist":[{"id":"1","0":"1","tag":"\u96c5\u8bd7\u5170\u9edb","1":"\u96c5\u8bd7\u5170\u9edb","sort":"99","2":"99","createtime":"2018-06-13 10:47:19","3":"2018-06-13 10:47:19","status":"1","4":"1"}]}-2018-08-17 09:17:08
+
+加密值:{"act":"bcBanner_delTag","id":"1","userid":2,"type":1,"token":"bf1c04da06e4271cda8ec64b027c67fe"}返回值:{"message":"\u8bf7\u5148\u767b\u5f55","code":312,"data":""}-2018-08-17 09:28:45
+
+加密值:{"act":"bcBanner_delTag","userid":2,"type":1,"token":"bf1c04da06e4271cda8ec64b027c67fe"}返回值:{"message":"\u8bf7\u5148\u767b\u5f55","code":312,"data":""}-2018-08-17 09:29:31
+
+加密值:{"act":"bcBanner_delTag","userid":2,"type":1,"token":"bf1c04da06e4271cda8ec64b027c67fe"}返回值:{"message":"\u5931\u8d25","code":400,"data":null}-2018-08-17 09:29:40
+
+加密值:{"act":"bcBanner_delTag","userid":13,"type":1,"token":"cd3976315fe6c0c1bbe67cf952369565"}返回值:{"message":"\u8bf7\u5148\u767b\u5f55","code":312,"data":""}-2018-08-17 09:31:39
+
+加密值:{"act":"bcBanner_delTag","userid":1,"type":3,"token":"1b2b25cd8e68ff711c1db59d7b6a7cf4"}返回值:{"message":"\u5931\u8d25","code":400,"data":null}-2018-08-17 09:31:52
+
+加密值:{"act":"bcBanner_delTag","tid":"1","userid":1,"type":3,"token":"1b2b25cd8e68ff711c1db59d7b6a7cf4"}返回值:{"message":"\u5931\u8d25","code":400,"data":null}-2018-08-17 09:32:09
+
+加密值:{"act":"bcBanner_delTag","tid":"2","userid":1,"type":3,"token":"1b2b25cd8e68ff711c1db59d7b6a7cf4"}返回值:{"message":"\u5931\u8d25","code":400,"data":null}-2018-08-17 09:33:51
+
+加密值:{"act":"bcBanner_delTag","tid":"2","userid":1,"type":3,"token":"1b2b25cd8e68ff711c1db59d7b6a7cf4"}返回值:{"message":"\u6210\u529f","code":200,"data":null}-2018-08-17 09:34:16
+

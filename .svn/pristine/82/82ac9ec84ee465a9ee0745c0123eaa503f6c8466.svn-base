@@ -1,0 +1,52 @@
+<?php
+/**
+ * 抓取汇率
+ * User: zx
+ * Date: 2018/8/20
+ * Time: 16:51
+ */
+class ExchangeRate{
+
+    //获取韩元汇率
+	public function getExchangeRate($data){
+		set_time_limit(0);
+		$url = "http://data.bank.hexun.com/other/cms/fxjhjson.ashx?callback=PereMoreData";
+		$output = CURL($url);
+		$res = mb_convert_encoding($output, 'UTF-8', 'UTF-8,GBK,GB2312,BIG5');
+		$res = preg_replace('# #','',$res);
+		preg_match_all(',{(.*?)},',$res,$match);
+		foreach ($match[0] as $key => $value) {
+			preg_match("|{currency:'(.*)',refePrice|",$value,$a);
+			preg_match("|refePrice:'(.*)',code|",$value,$b);
+			preg_match("|code:'(.*)'}|",$value,$c);
+			$array[$a[1]]['currency'] = $a[1];
+			$array[$a[1]]['refePrice'] = $b[1]/100;
+			$array[$a[1]]['code'] = $c[1];
+
+		}
+		$currency = $data['currency'] ? $data['currency'] : "美元";
+		if($currency == "all"){
+			$changerate = $array;
+		}else{
+			$changerate = $array[$currency];
+		}
+		$dataval['changerate'] = $changerate;
+		set_return_value(RESULT_SUCCESS, $dataval);
+	}
+
+    //修改后台汇率
+	public function updateExchangeRate($data){
+		$rate = $data['rate'] ? $data['rate'] : "";
+		if(!$rate){
+			set_return_value(WILL_FIELD_NULL, '');
+			return false;
+		}
+		$configModel = get_load_model('Config');
+		$ret = $configModel->updateExchangeRate($rate);
+		if($ret){
+			set_return_value(RESULT_SUCCESS, $dataval);
+		}else{
+			set_return_value(DEFEATED_ERROR, $dataval);
+		}
+	}
+}

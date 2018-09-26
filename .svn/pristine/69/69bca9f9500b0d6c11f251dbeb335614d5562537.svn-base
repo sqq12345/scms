@@ -1,0 +1,191 @@
+/*! author：陈成 */
+.layui-nav-tree .layui-nav-child dd.layui-this, .layui-nav-tree .layui-nav-child dd.layui-this a, .layui-nav-tree .layui-this, .layui-nav-tree .layui-this > a, .layui-nav-tree .layui-this > a:hover {
+  background-color: #4d91e4 !important; }
+
+.backimg-c {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center; }
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  width: 100%; }
+
+.auto-width {
+  width: auto !important; }
+
+.admin-overview-ul {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px; }
+  .admin-overview-ul li {
+    width: 30%;
+    margin-left: 1%;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center; }
+    .admin-overview-ul li div {
+      border-bottom: 1px solid white;
+      display: flex;
+      align-items: center;
+      padding: 10px; }
+    .admin-overview-ul li div:last-child {
+      border: none;
+      cursor: pointer; }
+    .admin-overview-ul li div:nth-child(2) {
+      height: 100px;
+      justify-content: center;
+      font-size: 24px; }
+
+.aequilate {
+  width: 50%; }
+
+.text-align-right {
+  text-align: right; }
+
+.padding15 {
+  padding: 15px;
+  padding-top: 0; }
+
+.level-2-option {
+  margin-left: 15px; }
+
+#classification-of-goods-administration-bk-div img {
+  max-width: 200px;
+  min-height: 50px;
+  min-width: 50px;
+  max-height: 100%;
+  margin-right: 15px;
+  margin-bottom: 15px; }
+
+#classification-of-goods-administration-div .layui-form-label {
+  width: 130px; }
+
+#classification-of-goods-administration-div .layui-input-block {
+  margin-left: 130px; }
+
+#classification-of-goods-administration-div img {
+  max-width: 200px;
+  min-height: 50px;
+  min-width: 50px;
+  max-height: 100%;
+  margin-right: 15px;
+  margin-bottom: 15px; }
+
+.tag-form {
+  margin-top: 15px; }
+
+.text-center {
+  text-align: center; }
+
+.box-shadow {
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  margin-top: 15px; }
+
+.add-selected-option .layui-btn {
+  height: 30px;
+  line-height: 30px;
+  margin: 4px 0 4px 10px; }
+
+.goods-list .inline-input input {
+  width: 45%;
+  display: inline; }
+
+.goods-list tbody tr:hover {
+  background-color: white !important; }
+
+.goods-list .layui-table-cell {
+  height: 55px;
+  line-height: 55px; }
+
+.goods-special-offer .layui-table-cell {
+  height: 55px;
+  overflow: visible !important; }
+
+.goods-special-offer input[disabled] {
+  border: none; }
+
+#stock-order-edit-div .shipping-address-title, #stock-order-edit-div-bk .shipping-address-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 20px 0; }
+
+#stock-order-edit-div .shipping-address-content, #stock-order-edit-div-bk .shipping-address-content {
+  font-size: 15px;
+  margin-bottom: 20px; }
+
+#stock-order-edit-div .logistics-information, #stock-order-edit-div-bk .logistics-information {
+  border: none; }
+
+#stock-order-edit-div .layui-timeline, #stock-order-edit-div-bk .layui-timeline {
+  padding-left: 80px;
+  margin-top: 20px;
+  padding-top: 10px;
+  background-color: #f6f6f6; }
+
+#stock-order-edit-div .layui-timeline-axis, #stock-order-edit-div-bk .layui-timeline-axis {
+  background: #f6f6f6; }
+
+#stock-order-edit-div .layui-timeline-item:before, #stock-order-edit-div hr, #stock-order-edit-div-bk .layui-timeline-item:before, #stock-order-edit-div-bk hr {
+  backface-color: #5FB878 !important; }
+
+#purchasing-agent-management-address .positive-photo-img, #purchasing-agent-management-address .reverse-photo-img {
+  min-width: 100px;
+  max-width: 200px;
+  min-height: 100px; }
+
+.table-img {
+  max-width: 200px;
+  min-height: 50px;
+  min-width: 50px;
+  max-height: 100%;
+  margin-right: 15px;
+  margin-bottom: 15px; }
+
+#index-banner-edit .index-banner-photo-img {
+  min-width: 100px;
+  max-width: 200px;
+  min-height: 100px; }
+
+.label-w120 {
+  max-width: 120px; }
+
+#loginOrRegist {
+  margin: 50px 50px 50px 0; }
+  #loginOrRegist a {
+    color: #999; }
+  #loginOrRegist a:hover {
+    color: #777; }
+  #loginOrRegist .refresh {
+    vertical-align: bottom;
+    line-height: 1; }
+
+.layui-upload-img {
+  min-width: 100px;
+  max-width: 200px;
+  min-height: 100px; }
+
+#distributive-buyer .distributive-buyer-order-info-table {
+  width: 100%;
+  font-size: 15px; }
+  #distributive-buyer .distributive-buyer-order-info-table td {
+    padding: 10px 15px 10px 0; }
+
+#distributive-buyer .distributive-buyer-goods-info-table {
+  width: 100%;
+  font-size: 15px; }
+  #distributive-buyer .distributive-buyer-goods-info-table td {
+    padding: 9px 15px; }
+
+td[data-field=productName] .layui-table-cell {
+  height: auto !important;
+  overflow: visible !important;
+  text-overflow: inherit !important;
+  white-space: normal !important; }
+
+/*# sourceMappingURL=index.css.map*/

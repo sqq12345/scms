@@ -1,0 +1,10 @@
+加密值:-返回值:{"message":"\u5931\u8d25","code":400,"data":""}-2018-09-26 03:57:30
+
+加密值:{"act":"bespeakConfig_getList","landtype":2,"userid":0}返回值:{"message":"\u6210\u529f","code":200,"data":{"west":null,"korea":null}}-2018-09-26 03:59:05
+
+加密值:{"act":"bespeakConfig_getList","landtype":2,"userid":0}返回值:{"message":"\u6210\u529f","code":200,"data":{"west":null,"korea":null}}-2018-09-26 03:59:17
+
+加密值:{"act":"bespeakConfig_getList","landtype":2,"userid":0}返回值:{"message":"\u6210\u529f","code":200,"data":{"west":null,"korea":null}}-2018-09-26 04:02:17
+
+加密值:-返回值:{"message":"\u5931\u8d25","code":400,"data":""}-2018-09-26 04:59:43
+

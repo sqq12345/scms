@@ -1,0 +1,128 @@
+加密值:-返回值:{"message":"\u5931\u8d25","code":400,"data":""}-2018-08-14 03:28:46
+
+加密值:-返回值:{"message":"\u5931\u8d25","code":400,"data":""}-2018-08-14 03:51:35
+
+加密值:-返回值:{"message":"\u5931\u8d25","code":400,"data":""}-2018-08-14 04:34:44
+
+加密值:-返回值:{"message":"\u5931\u8d25","code":400,"data":""}-2018-08-14 04:55:24
+
+加密值:-返回值:{"message":"\u5931\u8d25","code":400,"data":""}-2018-08-14 05:58:56
+
+加密值:-返回值:{"message":"\u5931\u8d25","code":400,"data":""}-2018-08-14 05:59:07
+
+加密值:-返回值:{"message":"\u5931\u8d25","code":400,"data":""}-2018-08-14 07:17:19
+
+加密值:-返回值:{"message":"\u5931\u8d25","code":400,"data":""}-2018-08-14 07:28:15
+
+加密值:-返回值:{"message":"\u5931\u8d25","code":400,"data":""}-2018-08-14 09:54:10
+
+加密值:-返回值:{"message":"\u5931\u8d25","code":400,"data":""}-2018-08-14 11:08:48
+
+加密值:-返回值:{"message":"\u5931\u8d25","code":400,"data":""}-2018-08-14 12:24:53
+
+加密值:-返回值:{"message":"\u5931\u8d25","code":400,"data":""}-2018-08-14 12:24:54
+
+加密值:-返回值:{"message":"\u5931\u8d25","code":400,"data":""}-2018-08-14 12:24:59
+
+加密值:-返回值:{"message":"\u5931\u8d25","code":400,"data":""}-2018-08-14 12:25:00
+
+加密值:-返回值:{"message":"\u5931\u8d25","code":400,"data":""}-2018-08-14 12:25:01
+
+加密值:-返回值:{"message":"\u5931\u8d25","code":400,"data":""}-2018-08-14 13:29:43
+
+加密值:-返回值:{"message":"\u5931\u8d25","code":400,"data":""}-2018-08-14 14:00:46
+
+加密值:-返回值:{"message":"\u5931\u8d25","code":400,"data":""}-2018-08-14 14:06:08
+
+加密值:-返回值:{"message":"\u5931\u8d25","code":400,"data":""}-2018-08-14 16:01:10
+
+加密值:-返回值:{"message":"\u5931\u8d25","code":400,"data":""}-2018-08-14 16:07:46
+
+加密值:{"act":"banner_getList","userid":0}返回值:{"message":"\u6210\u529f","code":200,"datalist":[{"id":7,"title":"\u6ce8\u518c\u8d60\u900130\u5929\u4f1a\u5458","img":"http:\/\/upload.hljr.com.cn\/62f32738-a7dd-4a5c-8132-f1b6a4ffcef9","url":"http:\/\/info.shichamaishou.com"},{"id":5,"title":"\u65f6\u5dee\u4e70\u624b\u5168\u4ecb\u7ecd","img":"http:\/\/upload.hljr.com.cn\/7ad494c4-a140-4218-8ba8-efea13960dba","url":"http:\/\/info.shichamaishou.com"},{"id":2,"title":"\u590f\u65e5\u6e05\u51c9 \u9632\u6652\u5927\u4f5c\u6218","img":"http:\/\/upload.hljr.com.cn\/ea2aaa3b-5c49-4193-b7f4-9e4f307dde30","url":"http:\/\/www.shichamaishou.com\/SpotDirectMail"}]}-2018-08-14 16:15:43
+
+加密值:{"act":"reSpecialProduct_getList","offset":0,"max":6,"userid":0}返回值:{"message":"\u6210\u529f","code":200,"datalist":[{"id":1,"pid":1,"skuId":5,"name":"\u8fea\u5965 \u70c8\u7130\u84dd\u91d1\u5507\u818f","goodIcon":"http:\/\/upload.hljr.com.cn\/F042783642_img.jpg","price":190,"original_Price":210,"model":"\u8272\u53f7","attr":"#642","stock":20}]}-2018-08-14 16:15:43
+
+加密值:{"act":"banner_getList","userid":0}返回值:{"message":"\u6210\u529f","code":200,"datalist":[{"id":7,"title":"\u6ce8\u518c\u8d60\u900130\u5929\u4f1a\u5458","img":"http:\/\/upload.hljr.com.cn\/62f32738-a7dd-4a5c-8132-f1b6a4ffcef9","url":"http:\/\/info.shichamaishou.com"},{"id":5,"title":"\u65f6\u5dee\u4e70\u624b\u5168\u4ecb\u7ecd","img":"http:\/\/upload.hljr.com.cn\/7ad494c4-a140-4218-8ba8-efea13960dba","url":"http:\/\/info.shichamaishou.com"},{"id":2,"title":"\u590f\u65e5\u6e05\u51c9 \u9632\u6652\u5927\u4f5c\u6218","img":"http:\/\/upload.hljr.com.cn\/ea2aaa3b-5c49-4193-b7f4-9e4f307dde30","url":"http:\/\/www.shichamaishou.com\/SpotDirectMail"}]}-2018-08-14 16:40:09
+
+加密值:{"act":"reSpecialProduct_getList","offset":0,"max":10,"userid":0}返回值:{"message":"\u6210\u529f","code":200,"datalist":[{"id":1,"pid":1,"skuId":5,"name":"\u8fea\u5965 \u70c8\u7130\u84dd\u91d1\u5507\u818f","goodIcon":"http:\/\/upload.hljr.com.cn\/F042783642_img.jpg","price":190,"original_Price":210,"model":"\u8272\u53f7","attr":"#642","stock":20}]}-2018-08-14 16:40:09
+
+加密值:{"act":"cart_getList","userid":60,"type":1,"token":"ad1c958fcd587d3a3a1320d6202ab402"}返回值:{"message":"\u6210\u529f","code":200,"data":{"list":[],"total":0,"num":0}}-2018-08-14 16:40:09
+
+加密值:{"act":"cart_getList","userid":59,"type":1,"token":"49a1d8c6da0526dd8be6d92eccc0d92d"}返回值:{"message":"\u6210\u529f","code":200,"data":{"list":[],"total":0,"num":0}}-2018-08-14 16:45:06
+
+加密值:{"act":"banner_getList","userid":0}返回值:{"message":"\u6210\u529f","code":200,"datalist":[{"id":7,"title":"\u6ce8\u518c\u8d60\u900130\u5929\u4f1a\u5458","img":"http:\/\/upload.hljr.com.cn\/62f32738-a7dd-4a5c-8132-f1b6a4ffcef9","url":"http:\/\/info.shichamaishou.com"},{"id":5,"title":"\u65f6\u5dee\u4e70\u624b\u5168\u4ecb\u7ecd","img":"http:\/\/upload.hljr.com.cn\/7ad494c4-a140-4218-8ba8-efea13960dba","url":"http:\/\/info.shichamaishou.com"},{"id":2,"title":"\u590f\u65e5\u6e05\u51c9 \u9632\u6652\u5927\u4f5c\u6218","img":"http:\/\/upload.hljr.com.cn\/ea2aaa3b-5c49-4193-b7f4-9e4f307dde30","url":"http:\/\/www.shichamaishou.com\/SpotDirectMail"}]}-2018-08-14 16:45:06
+
+加密值:{"act":"reSpecialProduct_getList","offset":0,"max":10,"userid":0}返回值:{"message":"\u6210\u529f","code":200,"datalist":[{"id":1,"pid":1,"skuId":5,"name":"\u8fea\u5965 \u70c8\u7130\u84dd\u91d1\u5507\u818f","goodIcon":"http:\/\/upload.hljr.com.cn\/F042783642_img.jpg","price":190,"original_Price":210,"model":"\u8272\u53f7","attr":"#642","stock":20}]}-2018-08-14 16:45:06
+
+加密值:{"offset":0,"max":10,"act":"order_getList","userid":59,"type":1,"token":"49a1d8c6da0526dd8be6d92eccc0d92d"}返回值:{"message":"\u6570\u636e\u4e3a\u7a7a","code":229,"data":[]}-2018-08-14 16:45:08
+
+加密值:{"act":"statistics_getOrder","sType":"1","userid":59,"type":1,"token":"49a1d8c6da0526dd8be6d92eccc0d92d"}返回值:{"message":"\u6210\u529f","code":200,"data":{"order":{"waitforpay":0,"pendingDelivery":0,"delivered":0}}}-2018-08-14 16:45:08
+
+加密值:{"offset":0,"max":10,"act":"order_getList","userid":59,"type":1,"token":"49a1d8c6da0526dd8be6d92eccc0d92d"}返回值:{"message":"\u6570\u636e\u4e3a\u7a7a","code":229,"data":[]}-2018-08-14 16:45:09
+
+加密值:{"offset":0,"max":10,"act":"order_getList","userid":59,"type":1,"token":"49a1d8c6da0526dd8be6d92eccc0d92d"}返回值:{"message":"\u6570\u636e\u4e3a\u7a7a","code":229,"data":[]}-2018-08-14 16:45:11
+
+加密值:{"offset":0,"max":10,"status":"waitforpay","act":"order_getList","userid":59,"type":1,"token":"49a1d8c6da0526dd8be6d92eccc0d92d"}返回值:{"message":"\u6570\u636e\u4e3a\u7a7a","code":229,"data":[]}-2018-08-14 16:45:12
+
+加密值:{"offset":0,"max":10,"status":"waitforpay","act":"order_getList","userid":59,"type":1,"token":"49a1d8c6da0526dd8be6d92eccc0d92d"}返回值:{"message":"\u6570\u636e\u4e3a\u7a7a","code":229,"data":[]}-2018-08-14 16:45:13
+
+加密值:{"offset":0,"max":10,"status":"pendingDelivery","act":"order_getList","userid":59,"type":1,"token":"49a1d8c6da0526dd8be6d92eccc0d92d"}返回值:{"message":"\u6570\u636e\u4e3a\u7a7a","code":229,"data":[]}-2018-08-14 16:45:14
+
+加密值:{"offset":0,"max":10,"status":"delivered","act":"order_getList","userid":59,"type":1,"token":"49a1d8c6da0526dd8be6d92eccc0d92d"}返回值:{"message":"\u6570\u636e\u4e3a\u7a7a","code":229,"data":[]}-2018-08-14 16:45:18
+
+加密值:{"offset":0,"max":10,"status":"pendingDelivery","act":"order_getList","userid":59,"type":1,"token":"49a1d8c6da0526dd8be6d92eccc0d92d"}返回值:{"message":"\u6570\u636e\u4e3a\u7a7a","code":229,"data":[]}-2018-08-14 16:45:18
+
+加密值:{"offset":0,"max":10,"status":"waitforpay","act":"order_getList","userid":59,"type":1,"token":"49a1d8c6da0526dd8be6d92eccc0d92d"}返回值:{"message":"\u6570\u636e\u4e3a\u7a7a","code":229,"data":[]}-2018-08-14 16:45:19
+
+加密值:{"offset":0,"max":10,"status":"pendingDelivery","act":"order_getList","userid":59,"type":1,"token":"49a1d8c6da0526dd8be6d92eccc0d92d"}返回值:{"message":"\u6570\u636e\u4e3a\u7a7a","code":229,"data":[]}-2018-08-14 16:45:19
+
+加密值:{"offset":0,"max":10,"status":"waitforpay","act":"order_getList","userid":59,"type":1,"token":"49a1d8c6da0526dd8be6d92eccc0d92d"}返回值:{"message":"\u6570\u636e\u4e3a\u7a7a","code":229,"data":[]}-2018-08-14 16:45:20
+
+加密值:{"offset":0,"max":10,"act":"order_getList","userid":59,"type":1,"token":"49a1d8c6da0526dd8be6d92eccc0d92d"}返回值:{"message":"\u6570\u636e\u4e3a\u7a7a","code":229,"data":[]}-2018-08-14 16:45:23
+
+加密值:{"act":"category_getList","userid":0}返回值:{"message":"\u6210\u529f","code":200,"datalist":[{"id":47,"name":"\u82ad\u59ae\u5170"},{"id":34,"name":"\u8d44\u751f\u5802"},{"id":33,"name":"RMK"},{"id":32,"name":"REFA"},{"id":29,"name":"NARS"},{"id":28,"name":"\u73ab\u67ef\u83f2"},{"id":27,"name":"MAC"},{"id":26,"name":"\u65e5\u6708\u6676\u91c7"},{"id":24,"name":"\u5170\u853b"},{"id":35,"name":"\u690d\u6751\u79c0"},{"id":36,"name":"SK-II"},{"id":37,"name":"\u6c64\u59c6\u798f\u7279"},{"id":46,"name":"\u4e3d\u5f97\u59ff"},{"id":45,"name":"\u53ef\u83b1\u4e1d"},{"id":44,"name":"\u4f0a\u601d"},{"id":42,"name":"AHC"},{"id":41,"name":"Dr.Jart"},{"id":40,"name":"JM"},{"id":39,"name":"\u5723\u7f57\u5170"},{"id":38,"name":"\u8870\u8d25\u57ce\u5e02"},{"id":23,"name":"\u6d77\u84dd\u4e4b\u8c1c"},{"id":22,"name":"\u79d1\u989c\u6c0f"},{"id":10,"name":"\u9999\u7f07\u5361"},{"id":9,"name":"\u6b27\u7f07\u4e3d"},{"id":8,"name":"\u82ad\u6bd4\u6ce2\u6717"},{"id":7,"name":"\u8d1d\u73b2\u5983"},{"id":6,"name":"\u827e\u51e1\u8fbe"},{"id":5,"name":"\u5b89\u5a1c\u82cf"},{"id":4,"name":"\u4f0a\u7d22"},{"id":2,"name":"\u9999\u5948\u513f"},{"id":11,"name":"\u5a07\u97f5\u8bd7"},{"id":12,"name":"\u73c2\u4e3d\u67cf\u8482"},{"id":13,"name":"\u5029\u78a7"},{"id":21,"name":"\u7956\u9a6c\u9f99"},{"id":20,"name":"\u5a07\u5170"},{"id":19,"name":"\u7eaa\u68b5\u5e0c"},{"id":18,"name":"\u963f\u739b\u5c3c"},{"id":17,"name":"\u99a5\u857e\u8bd7"},{"id":16,"name":"\u6590\u73de\u5c14"},{"id":15,"name":"\u96c5\u8bd7\u5170\u9edb"},{"id":14,"name":"\u9edb\u73c2"},{"id":1,"name":"\u8fea\u5965"}]}-2018-08-14 16:45:25
+
+加密值:{"act":"reProduct_getListByCid","offset":0,"max":10,"cid":47,"userid":0}返回值:{"message":"\u6210\u529f","code":200,"data":{"cid":47,"list":[{"id":381,"name":"\u82ad\u59ae\u5170\u5378\u5986\u818f","goodIcon":"http:\/\/upload.hljr.com.cn\/8dc25560-7626-4bd3-9be6-b444fe691e77","skuId":"822","dutyFreePrice":120,"price":110,"originalPrice":0,"isSpecial":0}]}}-2018-08-14 16:45:25
+
+加密值:{"act":"reProduct_getListByCid","offset":0,"max":10,"cid":33,"userid":0}返回值:{"message":"\u6210\u529f","code":200,"data":{"cid":33,"list":[{"id":286,"name":"3D\u51dd\u8102\u7c89\u997c","goodIcon":"http:\/\/upload.hljr.com.cn\/2025958_img.jpg","skuId":"595","dutyFreePrice":58,"price":50,"originalPrice":0,"isSpecial":0},{"id":287,"name":"\u6c34\u51dd\u67d4\u5149\u7c89\u5e95\u971c","goodIcon":"http:\/\/upload.hljr.com.cn\/2023329_img.jpg","skuId":"597","dutyFreePrice":250,"price":212,"originalPrice":0,"isSpecial":0}]}}-2018-08-14 16:45:28
+
+加密值:{"act":"reProduct_getListByCid","offset":0,"max":10,"cid":0,"userid":0}返回值:{"message":"\u6210\u529f","code":200,"data":{"cid":0,"list":[{"id":256,"name":"HD\u9ad8\u6e05\u871c\u7c89","goodIcon":"http:\/\/upload.hljr.com.cn\/I000070101_img.jpg","skuId":"525","dutyFreePrice":243,"price":218,"originalPrice":0,"isSpecial":0},{"id":1,"name":"\u70c8\u7130\u84dd\u91d1\u5507\u818f","goodIcon":"http:\/\/upload.hljr.com.cn\/F042783642_img.jpg","skuId":"5","dutyFreePrice":215,"price":190,"originalPrice":210,"isSpecial":1},{"id":257,"name":"\u5507\u818f","goodIcon":"http:\/\/upload.hljr.com.cn\/I000052500_img.jpg","skuId":"527","dutyFreePrice":147,"price":130,"originalPrice":0,"isSpecial":0},{"id":2,"name":"\u65b0\u763e\u8bf1\u6f06\u5149\u5507\u818f","goodIcon":"http:\/\/upload.hljr.com.cn\/F002880877_img.jpg","skuId":"53","dutyFreePrice":215,"price":210,"originalPrice":0,"isSpecial":0},{"id":258,"name":"\u5b9a\u5986\u55b7\u96fe","goodIcon":"http:\/\/upload.hljr.com.cn\/71080_img.jpg","skuId":"528","dutyFreePrice":179,"price":162,"originalPrice":0,"isSpecial":0},{"id":3,"name":"\u53d8\u8272\u5507\u818f\u5957\u88c5","goodIcon":"http:\/\/upload.hljr.com.cn\/F038105000_img.jpg","skuId":"22","dutyFreePrice":380,"price":365,"originalPrice":0,"isSpecial":0},{"id":259,"name":"\u6d6e\u751f\u82e5\u68a6\u7c89\u5e95\u6db2","goodIcon":"http:\/\/upload.hljr.com.cn\/2065407169_img.jpg","skuId":"530","dutyFreePrice":282,"price":250,"originalPrice":0,"isSpecial":0},{"id":260,"name":"\u7d27\u81f4\u7c89\u5e95\u6db2","goodIcon":"http:\/\/upload.hljr.com.cn\/31501_img.jpg","skuId":"531","dutyFreePrice":262,"price":235,"originalPrice":0,"isSpecial":0},{"id":5,"name":"\u900f\u767d\u4eae\u91c7\u7c89\u5e95\u6db2","goodIcon":"http:\/\/upload.hljr.com.cn\/F077032002_img.jpg","skuId":"17","dutyFreePrice":352,"price":330,"originalPrice":0,"isSpecial":0},{"id":261,"name":"\u7709\u5f62\u4fee\u6b63\u4e09\u4ef6\u5957","goodIcon":"http:\/\/upload.hljr.com.cn\/17125_img.jpg","skuId":"532","dutyFreePrice":269,"price":240,"originalPrice":0,"isSpecial":0}]}}-2018-08-14 16:45:29
+
+加密值:{"offset":0,"max":10,"act":"bespeakOrder_getList","userid":59,"type":1,"token":"49a1d8c6da0526dd8be6d92eccc0d92d"}返回值:{"message":"\u6570\u636e\u4e3a\u7a7a","code":229,"data":[]}-2018-08-14 16:45:30
+
+加密值:{"act":"statistics_getOrder","sType":"2","userid":59,"type":1,"token":"49a1d8c6da0526dd8be6d92eccc0d92d"}返回值:{"message":"\u6210\u529f","code":200,"data":{"bespeakOrder":{"waitforpay":0,"takingOrder":0,"pendingDelivery":0,"delivered":0}}}-2018-08-14 16:45:30
+
+加密值:{"offset":0,"max":10,"act":"bespeakOrder_getList","userid":59,"type":1,"token":"49a1d8c6da0526dd8be6d92eccc0d92d"}返回值:{"message":"\u6570\u636e\u4e3a\u7a7a","code":229,"data":[]}-2018-08-14 16:45:31
+
+加密值:{"offset":0,"max":10,"status":"waitforpay","act":"bespeakOrder_getList","userid":59,"type":1,"token":"49a1d8c6da0526dd8be6d92eccc0d92d"}返回值:{"message":"\u6570\u636e\u4e3a\u7a7a","code":229,"data":[]}-2018-08-14 16:45:32
+
+加密值:{"offset":0,"max":10,"status":"waitforpay","act":"bespeakOrder_getList","userid":59,"type":1,"token":"49a1d8c6da0526dd8be6d92eccc0d92d"}返回值:{"message":"\u6570\u636e\u4e3a\u7a7a","code":229,"data":[]}-2018-08-14 16:45:33
+
+加密值:{"offset":0,"max":10,"status":"waitforpay","act":"bespeakOrder_getList","userid":59,"type":1,"token":"49a1d8c6da0526dd8be6d92eccc0d92d"}返回值:{"message":"\u6570\u636e\u4e3a\u7a7a","code":229,"data":[]}-2018-08-14 16:45:34
+
+加密值:{"offset":0,"max":10,"status":"waitforpay","act":"bespeakOrder_getList","userid":59,"type":1,"token":"49a1d8c6da0526dd8be6d92eccc0d92d"}返回值:{"message":"\u6570\u636e\u4e3a\u7a7a","code":229,"data":[]}-2018-08-14 16:45:35
+
+加密值:{"offset":0,"max":10,"status":"waitforpay","act":"bespeakOrder_getList","userid":59,"type":1,"token":"49a1d8c6da0526dd8be6d92eccc0d92d"}返回值:{"message":"\u6570\u636e\u4e3a\u7a7a","code":229,"data":[]}-2018-08-14 16:45:36
+
+加密值:{"offset":0,"max":10,"status":"pendingDelivery","act":"bespeakOrder_getList","userid":59,"type":1,"token":"49a1d8c6da0526dd8be6d92eccc0d92d"}返回值:{"message":"\u6570\u636e\u4e3a\u7a7a","code":229,"data":[]}-2018-08-14 16:45:37
+
+加密值:{"offset":0,"max":10,"status":"pendingBuy","act":"bespeakOrder_getList","userid":59,"type":1,"token":"49a1d8c6da0526dd8be6d92eccc0d92d"}返回值:{"message":"\u6570\u636e\u4e3a\u7a7a","code":229,"data":[]}-2018-08-14 16:45:39
+
+加密值:{"offset":0,"max":10,"status":"pendingDelivery","act":"bespeakOrder_getList","userid":59,"type":1,"token":"49a1d8c6da0526dd8be6d92eccc0d92d"}返回值:{"message":"\u6570\u636e\u4e3a\u7a7a","code":229,"data":[]}-2018-08-14 16:45:40
+
+加密值:{"offset":0,"max":10,"status":"delivered","act":"bespeakOrder_getList","userid":59,"type":1,"token":"49a1d8c6da0526dd8be6d92eccc0d92d"}返回值:{"message":"\u6570\u636e\u4e3a\u7a7a","code":229,"data":[]}-2018-08-14 16:45:41
+
+加密值:{"offset":0,"max":10,"act":"bespeakOrder_getList","userid":59,"type":1,"token":"49a1d8c6da0526dd8be6d92eccc0d92d"}返回值:{"message":"\u6570\u636e\u4e3a\u7a7a","code":229,"data":[]}-2018-08-14 16:45:42
+
+加密值:-返回值:{"message":"\u5931\u8d25","code":400,"data":""}-2018-08-14 17:08:44
+
+加密值:{"username":"admin","password":"123456","act":"purchase_login","userid":0}返回值:{"message":"\u6210\u529f","code":200,"data":{"id":7,"username":"admin","nickname":null,"image":"http:\/\/upload.hljr.com.cn\/ava@3x.png","type":4,"token":"73dec68d8cefdedeb91d94d279ea37a8"}}-2018-08-14 17:38:33
+
+加密值:{"act":"reConfig_getInfo","clazz":"postage","userid":7,"type":4,"token":"73dec68d8cefdedeb91d94d279ea37a8"}返回值:{"message":"\u6210\u529f","code":200,"data":{"id":3,"clazz":"postage","cType":1,"value":399,"status":1}}-2018-08-14 17:38:36
+
+加密值:{"act":"reBcSpecialProduct_getList","userid":7,"type":4,"token":"73dec68d8cefdedeb91d94d279ea37a8"}返回值:{"message":"\u6210\u529f","code":200,"total":1,"datalist":[{"id":14,"type":1,"pid":1,"name":"\u70c8\u7130\u84dd\u91d1\u5507\u818f","skuId":5,"price":190,"attr":"#642","originalPrice":210,"priority":1,"status":"\u5df2\u751f\u6548"}]}-2018-08-14 17:38:37
+
+加密值:-返回值:{"message":"\u5931\u8d25","code":400,"data":""}-2018-08-14 19:40:02
+
+加密值:-返回值:{"message":"\u5931\u8d25","code":400,"data":""}-2018-08-14 21:55:23
+
