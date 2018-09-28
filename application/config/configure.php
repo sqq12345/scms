@@ -1,6 +1,6 @@
 ﻿<?php
 /*数据库连接*/
-define ('DB_DSN','mysql:host=localhost;port=3306;dbname=test');
+define ('DB_DSN','mysql:host=localhost;port=3306;dbname=scms');
 define ('DB_USER','root');
 define ('DB_PASSWD','root');
 

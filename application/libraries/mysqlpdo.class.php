@@ -17,9 +17,11 @@ class mysqldbo{
     /*数据库连接*/
     public function connect(){
         try{
+
             $this->pdo = new PDO($this->dsb, $this->name, $this->pass);
             $this->pdo->query('set names utf8');     
         } catch(Exception $e) {
+
             return $this->Set_Exception_Error($e->getMessage(), $e->getline, $e->getFile);
         } 
     }

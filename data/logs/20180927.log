@@ -1,0 +1,56 @@
+加密值:{"act":"wxchat_wxChatShare","shareUid":"1","userid":0,"type":"1"}返回值:{"message":"\u89e3\u5bc6\u9519\u8bef","code":220,"data":""}-2018-09-27 07:50:29
+
+加密值:{"act":"wxchat_wxChatShare","shareUid":"1","userid":0,"type":"1"}返回值:{"message":"\u89e3\u5bc6\u9519\u8bef","code":220,"data":""}-2018-09-27 08:01:48
+
+加密值:{"act":"wxchat_wxChatShare","shareUid":"1","userid":0,"type":"1"}返回值:{"message":"\u89e3\u5bc6\u9519\u8bef","code":220,"data":""}-2018-09-27 08:01:59
+
+加密值:{"act":"wxchat_wxChatShare","shareUid":"1","userid":0,"type":"1"}返回值:{"message":"\u89e3\u5bc6\u9519\u8bef","code":220,"data":""}-2018-09-27 08:02:07
+
+加密值:{"act":"wxchat_wxChatShare","shareUid":"1","userid":0,"type":"1"}返回值:{"message":"\u89e3\u5bc6\u9519\u8bef","code":220,"data":""}-2018-09-27 08:02:14
+
+加密值:{"act":"wxchat_wxChatShare","shareUid":"1","userid":0,"type":"1"}返回值:{"message":"\u89e3\u5bc6\u9519\u8bef","code":220,"data":""}-2018-09-27 08:03:12
+
+加密值:{"act":"wxchat_wxChatShare","shareUid":"1","userid":0,"type":"1"}返回值:{"message":"\u89e3\u5bc6\u9519\u8bef","code":220,"data":""}-2018-09-27 08:03:27
+
+加密值:{"act":"wxChat_wxChatShare","shareUid":"1","userid":0,"type":"1"}返回值:{"message":"\u6210\u529f","code":200,"data":[]}-2018-09-27 08:04:54
+
+加密值:{"act":"BcBanner_getList","userid":0}返回值:{"message":"\u89e3\u5bc6\u9519\u8bef","code":220,"data":""}-2018-09-27 09:33:44
+
+加密值:{"act":"BcBanner_getList","userid":0,"type":"1"}返回值:{"message":"\u89e3\u5bc6\u9519\u8bef","code":220,"data":""}-2018-09-27 09:34:13
+
+加密值:{"act":"BcBanner_getList","userid":0,"type":"1"}返回值:{"message":"\u89e3\u5bc6\u9519\u8bef","code":220,"data":""}-2018-09-27 09:34:14
+
+加密值:{"act":"BcBanner_getList","userid":0,"type":"1"}返回值:{"message":"\u89e3\u5bc6\u9519\u8bef","code":220,"data":""}-2018-09-27 09:34:27
+
+加密值:{"act":"BcBanner_getList","userid":0,"type":"1"}返回值:{"message":"\u89e3\u5bc6\u9519\u8bef","code":220,"data":""}-2018-09-27 09:35:24
+
+加密值:{"act":"BcBanner_getList","userid":0,"type":"1"}返回值:{"message":"\u89e3\u5bc6\u9519\u8bef","code":220,"data":""}-2018-09-27 09:35:39
+
+加密值:{"act":"BcBanner_getList","userid":0,"type":"1"}返回值:{"message":"\u89e3\u5bc6\u9519\u8bef","code":220,"data":""}-2018-09-27 09:35:39
+
+加密值:{"act":"BcBanner_getList","userid":0,"type":"1"}返回值:{"message":"\u89e3\u5bc6\u9519\u8bef","code":220,"data":""}-2018-09-27 09:36:04
+
+加密值:{"act":"BcBanner_getList","userid":0,"type":"1"}返回值:{"message":"\u89e3\u5bc6\u9519\u8bef","code":220,"data":""}-2018-09-27 09:36:29
+
+加密值:{"act":"BcBanner_getList","userid":0,"type":"1"}返回值:{"message":"\u89e3\u5bc6\u9519\u8bef","code":220,"data":""}-2018-09-27 09:36:35
+
+加密值:{"act":"BcBanner_getList","userid":0,"type":"1"}返回值:{"message":"\u89e3\u5bc6\u9519\u8bef","code":220,"data":""}-2018-09-27 09:36:36
+
+加密值:{"act":"BcBanner_getList","userid":0,"type":"1"}返回值:{"message":"\u89e3\u5bc6\u9519\u8bef","code":220,"data":""}-2018-09-27 09:37:07
+
+加密值:{"act":"BcBanner_getList","userid":0,"type":"1"}返回值:{"message":"\u89e3\u5bc6\u9519\u8bef","code":220,"data":""}-2018-09-27 09:38:34
+
+加密值:{"act":"BcBanner_getList","userid":0,"type":"1"}返回值:{"message":"\u89e3\u5bc6\u9519\u8bef","code":220,"data":""}-2018-09-27 09:39:03
+
+加密值:{"act":"BcBanner_getList","userid":0,"type":"1"}返回值:{"message":"\u89e3\u5bc6\u9519\u8bef","code":220,"data":""}-2018-09-27 09:39:11
+
+加密值:{"act":"BcBanner_getList","userid":0,"type":"1"}返回值:{"message":"\u89e3\u5bc6\u9519\u8bef","code":220,"data":""}-2018-09-27 09:39:12
+
+加密值:{"act":"bcBanner_getList","userid":0,"type":"1"}返回值:{"message":"\u8bf7\u5148\u767b\u5f55","code":312,"data":""}-2018-09-27 09:40:21
+
+加密值:{"act":"customer_login","username":"13411111111","password":"123456","userid":0}返回值:{"message":"\u6210\u529f","code":200,"data":{"id":1,"nickname":"\u5ba2\u62371\u53f7","img":"http:\/\/upload.hljr.com.cn\/50910293-3380-48cb-9a04-6bb80151cc80?imageMogr2\/auto-orient\/thumbnail\/100x100!","email":"xx","days":65,"token":"783d5b41bc4f4f7c30bc8b49e5c6b9bc"}}-2018-09-27 17:44:55
+
+加密值:{"act":"bcBanner_getlist","userid":0,"type":"1"}返回值:{"message":"\u8bf7\u5148\u767b\u5f55","code":312,"data":""}-2018-09-27 09:45:47
+
+加密值:{"act":"bcBanner_getlist","userid":0,"type":"1"}返回值:{"message":"\u8bf7\u5148\u767b\u5f55","code":312,"data":""}-2018-09-27 09:45:49
+

@@ -13,6 +13,7 @@ class BannerModel{
     public function ModelList(){
         $dataval = array();
         $where = "AND status = 1 ";
+        print_r($GLOBALS['DB']);die;
         $bannerlist = $GLOBALS['DB']->getSelect(ECHO_AQL_SWITCH, 0, $this->filepath, $this->fields, $where,'priority desc');
         if (empty($bannerlist)) {
             return $dataval;

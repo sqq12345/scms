@@ -167,15 +167,20 @@ function url_request() {
     );
     $act = $data['act'];	
     if(empty($post_token)){
+
         if(in_array($act, $_NEED_CHECK)) {
+
             set_return_value(USER_LOGIN_OUT, '');
             json_var($GLOBALS['ReturnValues']);
             exit;
         } else {
+
             $data['userid'] = 0;
             return $data;
         }
+
     } else{
+
         $tokenmodel = get_load_model('token');
         $tokenrow = $tokenmodel->ModelInfoByToken($post_token);
         if(empty($tokenrow)) {

@@ -2,7 +2,7 @@
 /**
  * 接口入口文件
  */
-echo 11;die;
+
 require_once('application/init.php');
 
 //header('Access-Control-Allow-Origin:*');
@@ -14,6 +14,7 @@ require_once('application/init.php');
 //header('Access-Control-Max-Age:60');
 
 $data = url_request();
+
 $act_array = explode('_',$data['act']);
 $act = isset($act_array[0]) ? $act_array[0] : '';
 $methods = isset($act_array[1]) ? $act_array[1] : '';
@@ -48,11 +49,13 @@ switch ($act) {
     break;
     case 'bcBanner' :
     require_once('application/controllers/BcBanner.php');
+
     $bcBanner =  new BcBanner();
     if(!method_exists($bcBanner,$methods)){
         Set_Return_Value(KEY_STR_ERROR, '');
         break;
     }
+
     $bcBanner->$methods($data);
     break;
     case 'banner' :
@@ -431,6 +434,7 @@ switch ($act) {
         Set_Return_Value(KEY_STR_ERROR, '');
         break;
     }
+
     $wxChat->$methods($data);
     break;
     case 'bcSplitOrder' :

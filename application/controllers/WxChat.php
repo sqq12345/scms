@@ -148,18 +148,23 @@ class WxChat{
 
     //微信分享
     public function wxChatShare($data){
+
     	$dataval = array();
     	$shareuser = $data['shareUid'] ? intval($data['shareUid']) : '';
     	$getuser = isset($data['userid']) ? intval($data['userid']) : '';
+    	echo $getuser;die;
     	$type = isset($data['type']) ? intval($data['type']) : '';
     	if ($getuser <= 0 || $type > 1) {
+
     		set_return_value(RESULT_SUCCESS, $dataval);
     		return false;
     	}
     	if(!$shareuser || !$getuser){
+
     		set_return_value(RESULT_SUCCESS, $dataval);
     		return false;
     	}
+
     	$model = get_load_model('WxMessage');
     	$shareInfo = $model->getShareByUser($shareuser, $getuser);
     	if($shareInfo){

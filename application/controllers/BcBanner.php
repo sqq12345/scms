@@ -8,11 +8,13 @@
 class BcBanner{
 
     public function getList($data){
+
         $dataval = array();
         $userid = isset($data['userid']) ? intval($data['userid']) : 0;    //用户的Id
         $type = isset($data['type']) ? intval($data['type']) : 0;    //用户的类型
         $page = isset($_POST['page']) ? $_POST['page'] : 0;
         $limit = isset($_POST['limit']) ? $_POST['limit'] : 10;
+
         if ($userid == 0 || $type < 3) {
             set_return_value(AUTH_ERROR, '');
             return false;
